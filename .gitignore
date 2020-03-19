@@ -128,7 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-/test_data
-connect.py
+/server/test_data
+/server/connect.py
 /.vscode/settings.json
-/mongo
+/server/mongo
