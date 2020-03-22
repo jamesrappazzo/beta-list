@@ -4,19 +4,29 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { PatientDetailComponent } from './patient-detail/patient-detail.component';
+import { CustomMaterialModule } from './material.module';
+import { RadioGroupComponent } from './form-components/radio-group/radio-group.component';
+import { DatePickerComponent } from './form-components/date-picker/date-picker.component';
+import { InputComponent } from './form-components/input/input.component';
+import { SelectComponent } from './form-components/select/select.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PatientDetailComponent,
+    RadioGroupComponent,
+    DatePickerComponent,
+    InputComponent,
+    SelectComponent
   ],
   imports: [
     FlexLayoutModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    CustomMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

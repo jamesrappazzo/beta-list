@@ -1,0 +1,55 @@
+<form>
+    <div fxLayout="column" fxLayoutGap="10px">
+        <!-- Begin General -->
+        <div fxLayout="row" fxLayoutGap="10px">
+            <bl-input fxFlex="50" label="First Name"></bl-input>
+            <bl-input fxFlex="50" label="Last Name"></bl-input>
+        </div>
+        <div fxLayout="row" fxLayoutGap="10px">
+            <bl-input fxFlex="50" label="MRN"></bl-input>
+            <bl-date-picker fxFlex="50" label="Date of Birth"></bl-date-picker>
+        </div>
+
+        <bl-input label="Attending Last Name"></bl-input>
+        <!-- End General -->
+
+        <!-- Begin Pregancy -->
+        <bl-select label="Pregnancy Desired" [options]="nullable_boolean_radio_options"></bl-select>
+        <bl-date-picker label="Date of Birth"></bl-date-picker>
+        <bl-select label="RH Positive" [options]="nullable_boolean_radio_options"></bl-select>
+        <bl-select label="Birth Control Method" [options]="birth_control_method_options"></bl-select>
+        <bl-input label="Other Birth Control Method"></bl-input>
+        <!-- End Pregnancy -->
+
+        <!-- Begin Presentation -->
+        <div fxLayout="row" fxLayoutGap="10px">
+            <bl-input fxFlex="20" label="Gravity" type="number"></bl-input>
+            <bl-input fxFlex="20" label="Full-Term Births" type="number"></bl-input>
+            <bl-input fxFlex="20" label="Pre-Term Births" type="number"></bl-input>
+            <bl-input fxFlex="20" label="Abortions" type="number"></bl-input>
+            <bl-input fxFlex="20" label="Living Children" type="number"></bl-input>
+        </div>
+        <bl-date-picker label="LMP"></bl-date-picker>
+        <bl-select label="Presenting Symptoms" [options]="presenting_symptom_options"></bl-select>
+        <bl-input label="Other Presenting Symptoms"></bl-input>
+        <!-- End Presentation -->
+        <!-- Begin Transvaginal Ultrasound -->
+        <bl-date-picker label="Ultrasound Date"></bl-date-picker>
+
+        <bl-select label="Intrauterine Pregnancy Present" [options]="nullable_boolean_radio_options"></bl-select>
+        <bl-select label="Yolk Sack Present" [options]="nullable_boolean_radio_options"></bl-select>
+        <bl-select label="Fetal Heart Rate Present" [options]="nullable_boolean_radio_options"></bl-select>
+        <div fxLayout="row" fxLayoutGap="10px">
+            <mat-label fxFlex="33.33">Estimated Gestational Age</mat-label>
+            <bl-input fxFlex="33.33" label="Weeks" type="number"></bl-input>
+            <bl-input fxFlex="33.33" label="Days" type="number"></bl-input>
+        </div>
+
+        <bl-select label="Free Fluid Amount" [options]="free_fluid_amount_options"></bl-select>
+        <!-- Begin Uterus -->
+        <bl-select label="Uterus Orientation" [options]="uterus_orientation_options"></bl-select>
+
+        <!-- End Uterus -->
+        <!-- End Transvaginal Ultrasound -->
+    </div>
+</form>

@@ -1,0 +1,8 @@
+<div fxFlexFill>
+    <label id="radio-group-label">{{label}}: </label>
+    <mat-radio-group aria-labelledby="radio-group-label" fxLayoutGap="5px">
+        <mat-radio-button *ngFor="let option of options | keyvalue: originalOrder" [value]="option.value">
+            {{option.key}}
+        </mat-radio-button>
+    </mat-radio-group>
+</div>

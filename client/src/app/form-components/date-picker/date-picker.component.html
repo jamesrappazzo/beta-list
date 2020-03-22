@@ -1,0 +1,6 @@
+<mat-form-field fxFlexFill>
+    <mat-label>{{label}}</mat-label>
+    <input matInput [matDatepicker]="bl_picker">
+    <mat-datepicker-toggle matSuffix [for]="bl_picker"></mat-datepicker-toggle>
+    <mat-datepicker #bl_picker></mat-datepicker>
+</mat-form-field>
