@@ -4,7 +4,9 @@ import {
   birth_control_method_options,
   presenting_symptom_options,
   free_fluid_amount_options,
-  uterus_orientation_options
+  uterus_orientation_options,
+  adnexal_mass_side_options,
+  adnexal_mass_location_options
 } from '../maps/index';
 @Component({
   selector: 'bl-patient-detail',
@@ -17,6 +19,8 @@ export class PatientDetailComponent implements OnInit {
   presenting_symptom_options: any = presenting_symptom_options.map;
   free_fluid_amount_options: any = free_fluid_amount_options.map;
   uterus_orientation_options: any = uterus_orientation_options.map;
+  adnexal_mass_side_options: any = adnexal_mass_side_options.map;
+  adnexal_mass_location_options: any = adnexal_mass_location_options.map;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 export enum values {
-    Antiverted = "Antiverted",
+    Anteverted = "Anteverted",
     MidPosition = "MidPosition",
     Retroverted = "Retroverted"
 }

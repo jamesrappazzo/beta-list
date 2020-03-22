@@ -8,7 +8,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core'
 import { MatRadioModule } from '@angular/material/radio';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 
 @NgModule({
     exports: [
@@ -18,6 +18,7 @@ import { MatRadioModule } from '@angular/material/radio';
         MatDatepickerModule,
         MatNativeDateModule,
         MatRadioModule,
+        MatSlideToggleModule,
         ObserversModule,
         PlatformModule
     ]

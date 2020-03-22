@@ -11,6 +11,8 @@ import { RadioGroupComponent } from './form-components/radio-group/radio-group.c
 import { DatePickerComponent } from './form-components/date-picker/date-picker.component';
 import { InputComponent } from './form-components/input/input.component';
 import { SelectComponent } from './form-components/select/select.component';
+import { CubicDimensionsComponent } from './form-components/cubic-dimensions/cubic-dimensions.component';
+import { SlideToggleComponent } from './form-components/slide-toggle/slide-toggle.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SelectComponent } from './form-components/select/select.component';
     RadioGroupComponent,
     DatePickerComponent,
     InputComponent,
-    SelectComponent
+    SelectComponent,
+    CubicDimensionsComponent,
+    SlideToggleComponent
   ],
   imports: [
     FlexLayoutModule,
