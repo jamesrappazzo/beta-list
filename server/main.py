@@ -1,6 +1,32 @@
 
-from mongoengine import EmbeddedDocument, EmbeddedDocumentField, IntField, FloatField, ListField, BooleanField, StringField, DateField, DynamicDocument
+# from mongoengine import EmbeddedDocument, EmbeddedDocumentField, IntField, FloatField, ListField, BooleanField, StringField, DateField, DynamicDocument
+from mongoengine import *
+from waitress import serve
+
 from connect import connect_to_db
+from flask import Flask
+from flask_restful import Resource, Api
+from flask_cors import CORS, cross_origin
+
+app = Flask(__name__)
+CORS(app, origins='http://localhost:8000')
+api = Api(app)
+
+@api.resource('/')
+class HelloWorld(Resource):
+    def get(self):
+        return {'hello': 'world'}
+
+if __name__ == "__main__":
+    connect_to_db()
+    serve(app, host='0.0.0.0', port=8080)
+    print(Patient.objects().first().first_name)
+
+# db.inventory.insert_one(
+#     {"item": "canvas2",
+#      "qty": 100,
+#      "tags": ["cotton"],
+#      "size": {"h": 28, "w": 35.5, "uom": "cm"}})
 
 class Pregnancy(EmbeddedDocument):
     desired = BooleanField()
@@ -41,7 +67,6 @@ class Ovary(EmbeddedDocument):
 
 
 class GestationalSack(EmbeddedDocument):
-    exists = BooleanField()
     size = FloatField()
 
 
@@ -82,7 +107,6 @@ class PathologyResult(EmbeddedDocument):
 
 
 class DoctorVisit(EmbeddedDocument):
-    exists = BooleanField()
     mva_performed = BooleanField()
     sonogram_performed = BooleanField()
     no_action_performed = BooleanField()
@@ -97,7 +121,6 @@ class PhoneCall(EmbeddedDocument):
 
 
 class EmergencyDepartmentVisit(EmbeddedDocument):
-    exists = BooleanField()
     sonogram_performed = BooleanField()
     beta_levels_measured = BooleanField()
     other_action_performed = StringField()
@@ -139,11 +162,3 @@ class Patient(DynamicDocument):
     follow_up_plans = ListField(EmbeddedDocumentField(FollowUpPlan))
     meta = {'collection': 'beta-list'}
 
-connect_to_db()
-# db.inventory.insert_one(
-#     {"item": "canvas2",
-#      "qty": 100,
-#      "tags": ["cotton"],
-#      "size": {"h": 28, "w": 35.5, "uom": "cm"}})
-print('here')
-print(Patient.objects().first().first_name)
