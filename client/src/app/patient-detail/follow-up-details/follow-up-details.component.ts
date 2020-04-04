@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  nullable_boolean_radio_options,
+  nullableBooleanRadioOptions,
 } from '../../maps/index';
 @Component({
   selector: 'bl-follow-up-details',
@@ -8,7 +8,7 @@ import {
   styleUrls: ['./follow-up-details.component.css']
 })
 export class FollowUpDetailsComponent implements OnInit {
-  nullable_boolean_radio_options: any = nullable_boolean_radio_options.map;
+  nullableBooleanRadioOptions: any = nullableBooleanRadioOptions.map;
 
   constructor() { }
 

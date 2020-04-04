@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +16,9 @@ import { CubicDimensionsComponent } from './form-components/cubic-dimensions/cub
 import { SlideToggleComponent } from './form-components/slide-toggle/slide-toggle.component';
 import { TextAreaComponent } from './form-components/text-area/text-area.component';
 import { PresentationDetailsComponent } from './patient-detail/presentation-details/presentation-details.component';
-import { TransvaginalUltrasoundDetailsComponent } from './patient-detail/transvaginal-ultrasound-details/transvaginal-ultrasound-details.component';
+import {
+  TransvaginalUltrasoundDetailsComponent
+} from './patient-detail/transvaginal-ultrasound-details/transvaginal-ultrasound-details.component';
 import { PregnancyDetailsComponent } from './patient-detail/pregnancy-details/pregnancy-details.component';
 import { PatientInteractionDetailsComponent } from './patient-detail/patient-interaction-details/patient-interaction-details.component';
 import { GeneralPatientDetailsComponent } from './patient-detail/general-patient-details/general-patient-details.component';

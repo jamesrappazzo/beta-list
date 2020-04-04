@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  nullable_boolean_radio_options
+  nullableBooleanRadioOptions
 } from '../../maps/index';
 @Component({
   selector: 'bl-beta-details',
@@ -8,7 +8,7 @@ import {
   styleUrls: ['./beta-details.component.css']
 })
 export class BetaDetailsComponent implements OnInit {
-  nullable_boolean_radio_options: any = nullable_boolean_radio_options.map;
+  nullableBooleanRadioOptions: any = nullableBooleanRadioOptions.map;
 
   constructor() { }
 

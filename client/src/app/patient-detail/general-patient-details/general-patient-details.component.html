@@ -1,4 +1,4 @@
-<div [formGroup]="generalPatientDetailsFormGroup" *ngIf="general_patient_details | async">
+<div [formGroup]="generalPatientDetailsFormGroup" *ngIf="generalPatientDetails | async">
     <div fxLayout="row" fxLayoutGap="10px">
         <bl-input fxFlex="50" label="First Name" [control]="controls.first_name"></bl-input>
         <bl-input fxFlex="50" label="Last Name" [control]="controls.last_name"></bl-input>

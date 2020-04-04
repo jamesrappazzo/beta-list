@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  presenting_symptom_options
+  presentingSymptomOptions
 } from '../../maps/index';
 @Component({
   selector: 'bl-presentation-details',
@@ -8,7 +8,7 @@ import {
   styleUrls: ['./presentation-details.component.css']
 })
 export class PresentationDetailsComponent implements OnInit {
-  presenting_symptom_options: any = presenting_symptom_options.map;
+  presentingSymptomOptions: any = presentingSymptomOptions.map;
 
   constructor() { }
 

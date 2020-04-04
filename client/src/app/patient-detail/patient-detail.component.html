@@ -1,6 +1,6 @@
 <form [formGroup]="form" *ngIf="patient | async">
     <div fxLayout="column" fxLayoutGap="10px">
-        <bl-general-patient-details [parentForm]="form" (onFormGroupChange)="onChange($event)"></bl-general-patient-details>
+        <bl-general-patient-details [parentForm]="form" (formGroupChange)="onChange($event)"></bl-general-patient-details>
         <!-- <bl-pregnancy-details></bl-pregnancy-details>
         <bl-presentation-details></bl-presentation-details>
         <bl-beta-details></bl-beta-details>
