@@ -1,5 +1,6 @@
 from mongoengine import EmbeddedDocument, EmbeddedDocumentField, IntField, FloatField, ListField, BooleanField, StringField, DateField, DynamicDocument
 
+
 class Pregnancy(EmbeddedDocument):
     desired = BooleanField()
     rh_positive = BooleanField()
@@ -117,16 +118,21 @@ class FollowUpPlan(EmbeddedDocument):
     refer_to_prenatal_care = BooleanField()
 
 
-class Patient(DynamicDocument):
+class GeneralPatientDetails(EmbeddedDocument):
     first_name = StringField()
     last_name = StringField()
     medical_record_number = StringField()
     phone_number = StringField()
     date_of_birth = DateField()
     attending_physician_last_name = StringField()
+
+
+class Patient(DynamicDocument):
+    general_patient_details = EmbeddedDocumentField(GeneralPatientDetails)
     pregnancy = EmbeddedDocumentField(Pregnancy)
     presentation = EmbeddedDocumentField(Presentation)
-    transvaginal_ultrasound = ListField(EmbeddedDocumentField(TransvaginalUltrasound))
+    transvaginal_ultrasound = ListField(
+        EmbeddedDocumentField(TransvaginalUltrasound))
     beta_readings = ListField(EmbeddedDocumentField(BetaReading))
     methotrexate_doses = ListField(EmbeddedDocumentField(MethotrexateDose))
     pathology_results = EmbeddedDocumentField(PathologyResult)
