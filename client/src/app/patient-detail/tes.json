@@ -1,0 +1,919 @@
+{
+   "_id":{
+      "$oid":"5e876d0087cd4aaefd6fc1bd"
+   },
+   "first_name":"Villarreal",
+   "last_name":"Sutton",
+   "medical_record_number":"5e86a84d8d3c1398e41522c1",
+   "phone_number":"(936) 418-2025",
+   "date_of_birth":{
+      "$date":982886400000
+   },
+   "attending_physician_last_name":"Donaldson",
+   "pregnancy":{
+      "desired":true,
+      "rh_positive":true,
+      "birth_control_method":"nexplanon"
+   },
+   "presentation":{
+      "gravity":3,
+      "parity":{
+         "num_full_term_births":4,
+         "num_pre_term_births":5,
+         "num_abortions":3,
+         "num_living_children":4
+      },
+      "last_menstrual_period":{
+         "$date":1579824000000
+      },
+      "presenting_symptoms":[
+         "abdominal pain"
+      ]
+   },
+   "transvaginal_ultrasound":[
+      {
+         "ultrasound_date":{
+            "$date":1566691200000
+         },
+         "uterus":{
+            "orientation":"midposition",
+            "dimensions":{
+               "length":7.0,
+               "width":12.0,
+               "height":5.0
+            },
+            "endometrial_thickness":11.0
+         },
+         "ovaries":[
+            {
+               "present":true,
+               "side":"left",
+               "dimensions":{
+                  "length":5.0,
+                  "width":5.0,
+                  "height":2.0
+               }
+            },
+            {
+               "present":true,
+               "side":"right",
+               "dimensions":{
+                  "length":2.0,
+                  "width":4.0,
+                  "height":2.0
+               }
+            }
+         ],
+         "intra_uterine_pregnancy_present":false,
+         "gestational_sack":{
+            "size":16.21
+         },
+         "yolk_sack_present":true,
+         "crown_rump_length":7.4,
+         "fetal_heart_rate_present":false,
+         "estimated_gestational_age_in_days":80,
+         "adnexal_masses":[
+            {
+               "side":"left",
+               "size":1.91,
+               "location":"cornual"
+            }
+         ],
+         "free_fluid_amount":"small"
+      }
+   ],
+   "beta_readings":[
+      {
+         "reading_date":{
+            "$date":1575590400000
+         },
+         "level":1946
+      },
+      {
+         "reading_date":{
+            "$date":1580342400000
+         },
+         "level":28389
+      },
+      {
+         "reading_date":{
+            "$date":1564876800000
+         },
+         "level":27629
+      },
+      {
+         "reading_date":{
+            "$date":1561852800000
+         },
+         "level":13109
+      },
+      {
+         "reading_date":{
+            "$date":1551744000000
+         },
+         "level":31342
+      },
+      {
+         "reading_date":{
+            "$date":1567814400000
+         },
+         "level":49442
+      },
+      {
+         "reading_date":{
+            "$date":1548028800000
+         },
+         "level":33568
+      },
+      {
+         "reading_date":{
+            "$date":1563753600000
+         },
+         "level":46863
+      },
+      {
+         "reading_date":{
+            "$date":1561507200000
+         },
+         "level":33242
+      }
+   ],
+   "methotrexate_doses":[
+      {
+         "administration_date":{
+            "$date":1554595200000
+         },
+         "quantity":88
+      }
+   ],
+   "pathology_results":{
+      "result_date":{
+         "$date":1562371200000
+      },
+      "products_of_conception":false,
+      "comments":"aliqua nulla sunt aliqua ullamco dolore laborum aliqua non ullamco Lorem et velit aliquip ut"
+   },
+   "patient_interactions":[
+      {
+         "interaction_date":{
+            "$date":1553990400000
+         },
+         "doctor_visit":{
+            "mva_performed":true,
+            "sonogram_performed":false,
+            "no_action_performed":false,
+            "other_actions_performed":false
+         },
+         "certified_letter_sent":true,
+         "phone_calls":[
+            {
+               "phone_number_called":"(936) 556-2500",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(955) 572-2935",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(887) 461-3682",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":true
+            }
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":false,
+            "beta_levels_measured":true,
+            "other_action_performed":"est eu incididunt sit amet elit nostrud culpa incididunt ipsum"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1547769600000
+         },
+         "doctor_visit":{
+            "mva_performed":false,
+            "sonogram_performed":true,
+            "no_action_performed":true,
+            "other_actions_performed":false
+         },
+         "certified_letter_sent":true,
+         "phone_calls":[
+            {
+               "phone_number_called":"(921) 412-3803",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(900) 523-3097",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(859) 409-2424",
+               "call_successful":true,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(834) 404-2526",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(807) 540-2626",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(824) 531-3855",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(979) 470-2562",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(941) 426-2868",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(965) 471-2953",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(999) 579-2261",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            }
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":false,
+            "beta_levels_measured":false,
+            "other_action_performed":"voluptate ut cupidatat est pariatur est exercitation tempor irure nisi"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1583366400000
+         },
+         "doctor_visit":{
+            "mva_performed":true,
+            "sonogram_performed":true,
+            "no_action_performed":true,
+            "other_actions_performed":false
+         },
+         "certified_letter_sent":true,
+         "phone_calls":[
+
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":false,
+            "beta_levels_measured":false,
+            "other_action_performed":"excepteur commodo do culpa aliqua labore consectetur velit ex mollit"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1549411200000
+         },
+         "doctor_visit":{
+            "mva_performed":false,
+            "sonogram_performed":false,
+            "no_action_performed":false,
+            "other_actions_performed":false
+         },
+         "certified_letter_sent":true,
+         "phone_calls":[
+            {
+               "phone_number_called":"(911) 569-3617",
+               "call_successful":true,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(877) 435-2735",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(891) 448-2663",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(824) 474-2626",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(967) 590-2622",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(809) 412-3041",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(932) 519-2154",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":false
+            }
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":false,
+            "beta_levels_measured":true,
+            "other_action_performed":"deserunt incididunt cillum velit adipisicing consequat do sunt magna sint"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1578182400000
+         },
+         "doctor_visit":{
+            "mva_performed":true,
+            "sonogram_performed":false,
+            "no_action_performed":true,
+            "other_actions_performed":true
+         },
+         "certified_letter_sent":true,
+         "phone_calls":[
+            {
+               "phone_number_called":"(931) 446-2222",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(931) 529-3500",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(896) 571-3588",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(809) 502-3920",
+               "call_successful":true,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(806) 585-2427",
+               "call_successful":true,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(815) 549-2964",
+               "call_successful":true,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(921) 561-3723",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(965) 548-2374",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(850) 504-3235",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            }
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":false,
+            "beta_levels_measured":true,
+            "other_action_performed":"qui do veniam mollit tempor id minim labore qui sunt"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1564790400000
+         },
+         "doctor_visit":{
+            "mva_performed":false,
+            "sonogram_performed":true,
+            "no_action_performed":false,
+            "other_actions_performed":true
+         },
+         "certified_letter_sent":true,
+         "phone_calls":[
+            {
+               "phone_number_called":"(870) 426-2634",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(822) 455-3851",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(917) 421-3194",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(813) 537-3467",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(873) 523-2269",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":true
+            }
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":true,
+            "beta_levels_measured":false,
+            "other_action_performed":"dolor commodo id nisi consequat eiusmod sunt nulla do laboris"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1547683200000
+         },
+         "doctor_visit":{
+            "mva_performed":true,
+            "sonogram_performed":false,
+            "no_action_performed":true,
+            "other_actions_performed":false
+         },
+         "certified_letter_sent":true,
+         "phone_calls":[
+            {
+               "phone_number_called":"(952) 577-3136",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(824) 575-3592",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(907) 522-2686",
+               "call_successful":true,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(878) 413-3287",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(900) 564-2731",
+               "call_successful":true,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(805) 443-2782",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(944) 520-2077",
+               "call_successful":true,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(847) 439-3632",
+               "call_successful":true,
+               "message_left":true,
+               "unable_to_reach":true
+            }
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":false,
+            "beta_levels_measured":false,
+            "other_action_performed":"quis est sit dolor mollit incididunt dolore irure laborum consequat"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1563926400000
+         },
+         "doctor_visit":{
+            "mva_performed":false,
+            "sonogram_performed":true,
+            "no_action_performed":false,
+            "other_actions_performed":true
+         },
+         "certified_letter_sent":true,
+         "phone_calls":[
+
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":true,
+            "beta_levels_measured":true,
+            "other_action_performed":"adipisicing incididunt nisi id qui elit cillum eu esse ipsum"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1565395200000
+         },
+         "doctor_visit":{
+            "mva_performed":true,
+            "sonogram_performed":false,
+            "no_action_performed":false,
+            "other_actions_performed":false
+         },
+         "certified_letter_sent":true,
+         "phone_calls":[
+            {
+               "phone_number_called":"(973) 454-2881",
+               "call_successful":true,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(813) 549-2075",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(976) 442-3557",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(838) 577-3480",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(950) 462-3588",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":false
+            }
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":true,
+            "beta_levels_measured":false,
+            "other_action_performed":"ad adipisicing non fugiat in voluptate ut pariatur incididunt mollit"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1563494400000
+         },
+         "doctor_visit":{
+            "mva_performed":true,
+            "sonogram_performed":true,
+            "no_action_performed":true,
+            "other_actions_performed":true
+         },
+         "certified_letter_sent":false,
+         "phone_calls":[
+            {
+               "phone_number_called":"(868) 515-2162",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(963) 599-2730",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            }
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":false,
+            "beta_levels_measured":false,
+            "other_action_performed":"ipsum velit veniam culpa quis dolor amet laborum non duis"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1557360000000
+         },
+         "doctor_visit":{
+            "mva_performed":true,
+            "sonogram_performed":false,
+            "no_action_performed":true,
+            "other_actions_performed":false
+         },
+         "certified_letter_sent":false,
+         "phone_calls":[
+            {
+               "phone_number_called":"(887) 498-3451",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(904) 563-2307",
+               "call_successful":true,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(906) 499-2653",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(830) 494-2865",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(906) 426-2273",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(800) 451-3515",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(873) 462-3366",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(944) 546-3483",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            }
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":false,
+            "beta_levels_measured":true,
+            "other_action_performed":"ea veniam in pariatur duis nulla excepteur mollit cupidatat do"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1554163200000
+         },
+         "doctor_visit":{
+            "mva_performed":true,
+            "sonogram_performed":false,
+            "no_action_performed":true,
+            "other_actions_performed":false
+         },
+         "certified_letter_sent":true,
+         "phone_calls":[
+            {
+               "phone_number_called":"(887) 454-2900",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(936) 574-2549",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            }
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":true,
+            "beta_levels_measured":true,
+            "other_action_performed":"exercitation proident dolor qui esse cillum minim veniam et aute"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1560988800000
+         },
+         "doctor_visit":{
+            "mva_performed":false,
+            "sonogram_performed":false,
+            "no_action_performed":true,
+            "other_actions_performed":false
+         },
+         "certified_letter_sent":false,
+         "phone_calls":[
+            {
+               "phone_number_called":"(975) 413-2131",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(829) 444-3776",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(980) 585-3537",
+               "call_successful":false,
+               "message_left":false,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(877) 587-2577",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            }
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":false,
+            "beta_levels_measured":false,
+            "other_action_performed":"officia magna ipsum ea excepteur culpa cupidatat officia sint qui"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1558569600000
+         },
+         "doctor_visit":{
+            "mva_performed":true,
+            "sonogram_performed":true,
+            "no_action_performed":true,
+            "other_actions_performed":true
+         },
+         "certified_letter_sent":false,
+         "phone_calls":[
+            {
+               "phone_number_called":"(989) 513-2758",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(987) 459-2540",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(911) 405-3765",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":false
+            },
+            {
+               "phone_number_called":"(842) 588-3458",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(879) 539-2113",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(961) 565-2614",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            },
+            {
+               "phone_number_called":"(838) 578-3614",
+               "call_successful":false,
+               "message_left":true,
+               "unable_to_reach":true
+            }
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":false,
+            "beta_levels_measured":false,
+            "other_action_performed":"enim eu culpa minim labore enim consequat minim ea qui"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1562457600000
+         },
+         "doctor_visit":{
+            "mva_performed":true,
+            "sonogram_performed":false,
+            "no_action_performed":false,
+            "other_actions_performed":true
+         },
+         "certified_letter_sent":true,
+         "phone_calls":[
+
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":true,
+            "beta_levels_measured":true,
+            "other_action_performed":"esse non officia ex nisi aute minim esse Lorem deserunt"
+         }
+      },
+      {
+         "interaction_date":{
+            "$date":1567728000000
+         },
+         "doctor_visit":{
+            "mva_performed":false,
+            "sonogram_performed":true,
+            "no_action_performed":false,
+            "other_actions_performed":true
+         },
+         "certified_letter_sent":true,
+         "phone_calls":[
+            {
+               "phone_number_called":"(928) 452-2417",
+               "call_successful":true,
+               "message_left":false,
+               "unable_to_reach":false
+            }
+         ],
+         "emergency_department_visit":{
+            "sonogram_performed":false,
+            "beta_levels_measured":true,
+            "other_action_performed":"voluptate sit ullamco culpa veniam culpa fugiat Lorem pariatur veniam"
+         }
+      }
+   ],
+   "follow_up_plans":[
+      {
+         "start_date":{
+            "$date":1549152000000
+         },
+         "due_date":{
+            "$date":1582243200000
+         },
+         "repeat_beta":false,
+         "sonogram":false,
+         "mva":false,
+         "family_planning_appointment":true,
+         "refer_to_prenatal_care":true
+      },
+      {
+         "start_date":{
+            "$date":1572739200000
+         },
+         "due_date":{
+            "$date":1562716800000
+         },
+         "repeat_beta":false,
+         "sonogram":false,
+         "mva":false,
+         "family_planning_appointment":true,
+         "refer_to_prenatal_care":true
+      }
+   ]
+}

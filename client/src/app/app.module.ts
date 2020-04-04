@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule }    from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,9 @@ import { PatientInteractionDetailsComponent } from './patient-detail/patient-int
 import { GeneralPatientDetailsComponent } from './patient-detail/general-patient-details/general-patient-details.component';
 import { FollowUpDetailsComponent } from './patient-detail/follow-up-details/follow-up-details.component';
 import { BetaDetailsComponent } from './patient-detail/beta-details/beta-details.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PatientsService } from './services/patients.service';
+import { ActivePatientStoreService } from './services/active-patient-store.service';
 
 @NgModule({
   declarations: [
@@ -46,9 +50,12 @@ import { BetaDetailsComponent } from './patient-detail/beta-details/beta-details
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CustomMaterialModule
+    CustomMaterialModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [PatientsService, ActivePatientStoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

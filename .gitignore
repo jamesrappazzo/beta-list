@@ -131,4 +131,4 @@ dmypy.json
 /server/test_data
 /server/connect.py
 /.vscode/settings.json
-/server/mongo
+/server/mongo/mong_client.py
