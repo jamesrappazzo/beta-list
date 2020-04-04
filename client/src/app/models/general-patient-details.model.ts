@@ -1,6 +1,6 @@
 export interface GeneralPatientDetails {
-    first_name: String;
-    last_name: String;
+    first_name: string;
+    last_name: string;
     medical_record_number: string;
     phone_number: string;
     date_of_birth: string;

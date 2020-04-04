@@ -8,7 +8,7 @@ import { PatientInteraction } from './patient-interaction.model';
 import { FollowUpPlan } from './follow-up-plan.model';
 import { GeneralPatientDetails } from './general-patient-details.model';
 export interface ObjectId {
-    $oid: String;
+    $oid: string;
 }
 export interface Patient {
     _id: ObjectId;

@@ -1,19 +1,19 @@
 // export * as nullable_boolean_radio_options from './nullable-boolean-radio-options.maps'
 
-import * as nullable_boolean_radio_options from './nullable-boolean-radio-options.map';
-import * as birth_control_method_options from './birth-control-method-options.map';
-import * as presenting_symptom_options from './presenting-symptom-options.map';
-import * as free_fluid_amount_options from './free-fluid-amount-options.map';
-import * as uterus_orientation_options from './uterus-orientation-options.map';
-import * as adnexal_mass_side_options from './adnexal-mass-side-options.map';
-import * as adnexal_mass_location_options from './adnexal-mass-location-options.map';
+import * as nullableBooleanRadioOptions from './nullable-boolean-radio-options.map';
+import * as birthControlMethodOptions from './birth-control-method-options.map';
+import * as presentingSymptomOptions from './presenting-symptom-options.map';
+import * as freeFluidAmountOptions from './free-fluid-amount-options.map';
+import * as uterusOrientationOptions from './uterus-orientation-options.map';
+import * as adnexalMassSideOptions from './adnexal-mass-side-options.map';
+import * as adnexalMassLocationOptions from './adnexal-mass-location-options.map';
 
 export {
-    nullable_boolean_radio_options,
-    birth_control_method_options,
-    presenting_symptom_options,
-    free_fluid_amount_options,
-    uterus_orientation_options,
-    adnexal_mass_side_options,
-    adnexal_mass_location_options
+    nullableBooleanRadioOptions,
+    birthControlMethodOptions,
+    presentingSymptomOptions,
+    freeFluidAmountOptions,
+    uterusOrientationOptions,
+    adnexalMassSideOptions,
+    adnexalMassLocationOptions
 };

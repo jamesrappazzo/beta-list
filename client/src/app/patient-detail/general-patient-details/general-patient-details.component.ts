@@ -15,13 +15,13 @@ import { Patient } from 'src/app/models/patient.model';
 export class GeneralPatientDetailsComponent implements OnInit {
   generalPatientDetailsFormGroup: FormGroup;
   @Input() parentForm: FormGroup;
-  @Output() onFormGroupChange: EventEmitter<FormGroup> = new EventEmitter<FormGroup>();
-  general_patient_details: Observable<GeneralPatientDetails>;
+  @Output() formGroupChange: EventEmitter<FormGroup> = new EventEmitter<FormGroup>();
+  generalPatientDetails: Observable<GeneralPatientDetails>;
   constructor(private patientsService: PatientsService, private activePatientStoreService: ActivePatientStoreService) { }
   controls = {
     first_name: new FormControl('', Validators.required),
     last_name: new FormControl('', Validators.required)
-  }
+  };
 
   ngOnInit(): void {
     this.generalPatientDetailsFormGroup = new FormGroup({
@@ -31,7 +31,7 @@ export class GeneralPatientDetailsComponent implements OnInit {
 
     this.parentForm.addControl('generalPatientDetailsFormGroup', this.generalPatientDetailsFormGroup);
 
-    this.general_patient_details = this.activePatientStoreService.generalPatientDetails$
+    this.generalPatientDetails = this.activePatientStoreService.generalPatientDetails$
       .pipe(
         delay(0),
         filter(generalPatientDetails => generalPatientDetails !== null && generalPatientDetails !== undefined),
