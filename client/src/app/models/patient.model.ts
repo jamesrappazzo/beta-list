@@ -6,14 +6,13 @@ import { MethotrexateDose } from './methotrexate-dose.model';
 import { PathologyResults } from './pathology-results.model';
 import { PatientInteraction } from './patient-interaction.model';
 import { FollowUpPlan } from './follow-up-plan.model';
-
+import { GeneralPatientDetails } from './general-patient-details.model';
+export interface ObjectId {
+    $oid: String;
+}
 export interface Patient {
-    first_name: string;
-    last_name: string;
-    medical_record_number: string;
-    phone_number: string;
-    date_of_birth: string;
-    attending_physician_last_name: string;
+    _id: ObjectId;
+    general_patient_details: GeneralPatientDetails;
     pregnancy: Pregnancy;
     presentation: Presentation;
     transvaginal_ultrasound: TransvaginalUltrasound[];

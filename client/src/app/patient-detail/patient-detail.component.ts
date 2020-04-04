@@ -30,26 +30,21 @@ export class PatientDetailComponent implements OnInit {
   constructor(private activePatientStoreService: ActivePatientStoreService, private patientsService: PatientsService) { }
   form: FormGroup;
   patient: Observable<Patient>;
-  controls = {
-    first_name: new FormControl('', Validators.required),
-    last_name: new FormControl('', Validators.required)
-  }
 
   ngOnInit(): void {
-    this.form = new FormGroup({
-      first_name: this.controls.first_name,
-      last_name: this.controls.last_name,
-    });
+    this.form = new FormGroup({});
 
 
-    this.patientsService.get("5e876d0087cd4aaefd6fc1bd")
-      .subscribe((patient) => this.activePatientStoreService.activePatient = patient);
+    this.patientsService.get("5e88cf6787cd4aaefd6fc1d2")
+      .subscribe((patient) => {
+        this.activePatientStoreService.activePatient = patient;
+      });
+    this.patient = this.activePatientStoreService.activePatient$;
+  }
 
-    this.patient = this.activePatientStoreService.activePatient$
-      .pipe(filter(patient => patient !== null && patient !== undefined), tap(patient =>{
-        this.form.patchValue(patient);
-        console.log(patient)}));
-
+  onChange(form: FormGroup) {
+    // reset the form value to the newly emitted form group value.
+    this.form = form;
   }
 
 }

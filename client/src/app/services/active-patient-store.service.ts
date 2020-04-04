@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject} from 'rxjs'
-import {shareReplay, map} from 'rxjs/operators'
+import { BehaviorSubject } from 'rxjs'
+import { shareReplay, map, tap, distinctUntilChanged } from 'rxjs/operators'
 import { PatientsService } from './patients.service';
 import { Patient } from '../models/patient.model';
+import { GeneralPatientDetails } from '../models/general-patient-details.model';
+import { Observable } from 'rxjs';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class ActivePatientStoreService {
 
 
@@ -20,8 +22,11 @@ export class ActivePatientStoreService {
   private readonly _activePatient = new BehaviorSubject<Patient>(null);
 
   // Expose the observable$ part of the _todos subject (read only stream)
-  readonly activePatient$ = this._activePatient.asObservable();
-
+  readonly activePatient$: Observable<Patient> = this._activePatient.asObservable();
+  readonly generalPatientDetails$: Observable<GeneralPatientDetails> = this.activePatient$
+    .pipe(
+      map(patient => patient.general_patient_details)
+    )
 
   // // we'll compose the todos$ observable with map operator to create a stream of only completed todos
   // readonly completedTodos$ = this.todos$.pipe(
