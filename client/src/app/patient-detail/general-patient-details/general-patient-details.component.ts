@@ -1,10 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { PatientsService } from 'src/app/services/patients.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { GeneralPatientDetails } from 'src/app/models/general-patient-details.model';
-import { filter, tap, delay, distinctUntilChanged, debounceTime } from 'rxjs/operators';
+import { filter, tap, delay, distinctUntilChanged, debounceTime, takeWhile, takeUntil } from 'rxjs/operators';
 import { ActivePatientStoreService } from 'src/app/services/active-patient-store.service';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { isEqual } from 'lodash-es';
 
 @Component({
@@ -12,12 +12,14 @@ import { isEqual } from 'lodash-es';
   templateUrl: './general-patient-details.component.html',
   styleUrls: ['./general-patient-details.component.css']
 })
-export class GeneralPatientDetailsComponent implements OnInit {
+export class GeneralPatientDetailsComponent implements OnInit, OnDestroy {
   generalPatientDetailsFormGroup: FormGroup;
   @Input() parentForm: FormGroup;
   @Output() formGroupChange: EventEmitter<FormGroup> = new EventEmitter<FormGroup>();
   generalPatientDetails: Observable<GeneralPatientDetails>;
+  private unsubscribe: Subject<void> = new Subject();
   constructor(private patientsService: PatientsService, private activePatientStoreService: ActivePatientStoreService) { }
+
   controls = {
     first_name: new FormControl('', Validators.required),
     last_name: new FormControl('', Validators.required),
@@ -48,9 +50,15 @@ export class GeneralPatientDetailsComponent implements OnInit {
   }
   onChanges() {
     this.generalPatientDetailsFormGroup.valueChanges
-      .pipe(debounceTime(200),
+      .pipe(takeUntil(this.unsubscribe),
+        debounceTime(200),
         distinctUntilChanged(isEqual))
       .subscribe(val => this.activePatientStoreService.generalPatientDetails = val);
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
   }
 
 }
