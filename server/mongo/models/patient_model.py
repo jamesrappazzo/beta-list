@@ -1,4 +1,4 @@
-from mongoengine import EmbeddedDocument, EmbeddedDocumentField, IntField, FloatField, ListField, BooleanField, StringField, DateField, DynamicDocument
+from mongoengine import EmbeddedDocument, EmbeddedDocumentField, IntField, FloatField, ListField, BooleanField, StringField, StringField, DynamicDocument
 
 
 class Pregnancy(EmbeddedDocument):
@@ -17,7 +17,7 @@ class Parity(EmbeddedDocument):
 class Presentation(EmbeddedDocument):
     gravity = IntField()
     parity = EmbeddedDocumentField(Parity)
-    last_menstrual_period = DateField()
+    last_menstrual_period = StringField()
     presenting_symptoms = ListField(StringField())
 
 
@@ -50,7 +50,7 @@ class AdnexalMass(EmbeddedDocument):
 
 
 class TransvaginalUltrasound(EmbeddedDocument):
-    ultrasound_date = DateField()
+    ultrasound_date = StringField()
     uterus = EmbeddedDocumentField(Uterus)
     ovaries = ListField(EmbeddedDocumentField(Ovary))
     intra_uterine_pregnancy_present = BooleanField()
@@ -64,17 +64,17 @@ class TransvaginalUltrasound(EmbeddedDocument):
 
 
 class BetaReading(EmbeddedDocument):
-    reading_date = DateField()
+    reading_date = StringField()
     level = IntField()
 
 
 class MethotrexateDose(EmbeddedDocument):
-    administration_date = DateField()
+    administration_date = StringField()
     quantity = IntField()
 
 
 class PathologyResult(EmbeddedDocument):
-    result_date = DateField()
+    result_date = StringField()
     products_of_conception = BooleanField()
     comments = StringField()
 
@@ -100,7 +100,7 @@ class EmergencyDepartmentVisit(EmbeddedDocument):
 
 
 class PatientInteraction(EmbeddedDocument):
-    interaction_date = DateField()
+    interaction_date = StringField()
     doctor_visit = EmbeddedDocumentField(DoctorVisit)
     certified_letter_sent = BooleanField()
     phone_calls = ListField(EmbeddedDocumentField(PhoneCall))
@@ -109,8 +109,8 @@ class PatientInteraction(EmbeddedDocument):
 
 
 class FollowUpPlan(EmbeddedDocument):
-    start_date = DateField()
-    due_date = DateField()
+    start_date = StringField()
+    due_date = StringField()
     repeat_beta = BooleanField()
     sonogram = BooleanField()
     mva = BooleanField()
@@ -123,7 +123,7 @@ class GeneralPatientDetails(EmbeddedDocument):
     last_name = StringField()
     medical_record_number = StringField()
     phone_number = StringField()
-    date_of_birth = DateField()
+    date_of_birth = StringField()
     attending_physician_last_name = StringField()
 
 

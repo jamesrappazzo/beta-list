@@ -21,25 +21,11 @@ class HelloWorld(Resource):
 @api.resource('/patients/<string:id>')
 class PatientsResource(Resource):
     def get(self, id):
-        # Patient.objects.get(id=id) #"5e876d0087cd4aaefd6fc1bd")
-        # return {
-        #     "general_patient_details": {
-        #         "first_name": Patient.objects.get(id=id).general_patient_details.first_name,
-        #         "last_name": Patient.objects.get(id=id).general_patient_details.last_name
-        #     }
-        #   }
         return json.loads(Patient.objects.get(id=id).to_json())
 
     # def put(self, todo_id):
     #     todos[todo_id] = request.form['data']
     #     return {todo_id: todos[todo_id]}
-
-# api.add_resource(TodoSimple, '/<string:todo_id>')
-# db.inventory.insert_one(
-#     {"item": "canvas2",
-#      "qty": 100,
-#      "tags": ["cotton"],
-#      "size": {"h": 28, "w": 35.5, "uom": "cm"}})
 
 
 if __name__ == "__main__":
