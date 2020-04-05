@@ -41,12 +41,23 @@ export class ActivePatientStoreService {
   get activePatient(): Patient {
     return this.ActivePatient.getValue();
   }
-
-
   // assigning a value to this.todos will push it onto the observable
   // and down to all of its subsribers (ex: this.todos = [])
   set activePatient(val: Patient) {
     this.ActivePatient.next(val);
+  }
+
+  // the getter will return the last value emitted in _todos subject
+  get generalPatientDetails(): GeneralPatientDetails {
+    return this.ActivePatient.getValue().general_patient_details;
+  }
+  // assigning a value to this.todos will push it onto the observable
+  // and down to all of its subsribers (ex: this.todos = [])
+  set generalPatientDetails(val: GeneralPatientDetails) {
+    const activepatient = this.activePatient;
+
+    activepatient.general_patient_details = val;
+    this.ActivePatient.next(activepatient);
   }
 
 }
