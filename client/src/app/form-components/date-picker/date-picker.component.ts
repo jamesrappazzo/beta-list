@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'bl-date-picker',
@@ -7,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DatePickerComponent implements OnInit {
   @Input() label: string;
+  @Input() control: FormControl;
   constructor() { }
 
   ngOnInit(): void {
