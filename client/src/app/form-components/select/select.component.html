@@ -1,6 +1,6 @@
 <mat-form-field fxFlexFill>
     <mat-label>{{label}}</mat-label>
-    <mat-select [multiple]="multiple">
+    <mat-select [multiple]="multiple" [formControl]="control">
         <mat-option *ngFor="let option of options | keyvalue: originalOrder" [value]="option.value">
             {{option.key}}
         </mat-option>

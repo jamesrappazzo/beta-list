@@ -30,7 +30,7 @@ export class PatientDetailComponent implements OnInit, OnDestroy {
     this.form = new FormGroup({});
 
 
-    this.patientsService.get('5e89304487cd4aaefd6fc1dc').pipe(takeUntil(this.unsubscribe))
+    this.patientsService.get('5e8bf04c87cd4aaefd6fc1e6').pipe(takeUntil(this.unsubscribe))
       .subscribe((patient) => {
         this.activePatientStoreService.activePatient = patient;
         console.log(patient);

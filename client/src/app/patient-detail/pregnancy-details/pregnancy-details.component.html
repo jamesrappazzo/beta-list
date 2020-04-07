@@ -1,5 +1,9 @@
-<bl-select label="Pregnancy Desired" [options]="nullableBooleanRadioOptions"></bl-select>
-<bl-date-picker label="Date of Birth"></bl-date-picker>
-<bl-select label="RH Positive" [options]="nullableBooleanRadioOptions"></bl-select>
-<bl-select label="Birth Control Method" [options]="birthControlMethodOptions"></bl-select>
-<bl-input label="Other Birth Control Method"></bl-input>
+<div [formGroup]="pregnancyFormGroup" *ngIf="pregnancy | async">
+
+    <bl-select label="Pregnancy Desired" [control]="controls.desired" [options]="nullableBooleanRadioOptions">
+    </bl-select>
+    <bl-select label="RH Positive" [control]="controls.rh_positive" [options]="nullableBooleanRadioOptions"></bl-select>
+    <bl-select label="Birth Control Method" [control]="controls.birth_control_method"
+        [options]="birthControlMethodOptions"></bl-select>
+    <!-- <bl-input label="Other Birth Control Method"></bl-input> -->
+</div>

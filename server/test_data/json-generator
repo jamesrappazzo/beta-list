@@ -1,0 +1,133 @@
+[
+  '{{repeat(10)}}',
+  {
+    general_patient_details:{
+    first_name: '{{firstName()}}',
+    last_name: '{{surname()}}',
+    medical_record_number: '{{objectId()}}',
+    phone_number: '{{phone()}}',
+    date_of_birth: '{{date(new Date(1985, 0, 1), new Date(2004, 0, 1), "YYYY-MM-dd")}}',
+    attending_physician_last_name: '{{surname()}}'
+    },
+    pregnancy: {
+      desired: '{{bool()}}',
+      rh_positive: '{{bool()}}',
+      birth_control_method: '{{random("nexplanon", "IUD", "Condom", "Pill", "Patch", "Declines")}}'
+  },
+    presentation: {
+      gravity: '{{integer(1, 5)}}',
+      parity: {
+        num_full_term_births: '{{integer(1,5)}}',
+        num_pre_term_births: '{{integer(1,5)}}',
+        num_abortions: '{{integer(1,5)}}',
+        num_living_children: '{{integer(1,5)}}'
+      },
+      last_menstrual_period: '{{date(new Date(2019, 0, 1), new Date(), "YYYY-MM-dd")}}',
+      presenting_symptoms: [
+      '{{repeat(1,2)}}',
+      '{{random("cramps", "abdominal pain", "bleeding")}}'
+    ]
+    },
+    transvaginal_ultrasound: [
+      '{{repeat(0, 4)}}',
+      {
+      ultrasound_date: '{{date(new Date(2019, 0, 10), new Date(), "YYYY-MM-dd")}}',
+      uterus: {
+        orientation: '{{random("anteverted", "retroverted", "midposition")}}',
+        dimensions: {
+          length: '{{integer(5, 15)}}',
+          width: '{{integer(5, 15)}}',
+          height: '{{integer(5, 15)}}'
+        },
+        endometrial_thickness: '{{integer(5, 15)}}'
+      },
+      ovaries: [{
+        side: 'left',
+        present: '{{bool()}}',
+        dimensions: {
+          length: '{{integer(2, 6)}}',
+          width: '{{integer(2, 6)}}',
+          height: '{{integer(2, 6)}}'
+        }
+      },
+      {
+        side: 'right',
+        present: '{{bool()}}',
+        dimensions: {
+          length: '{{integer(2, 6)}}',
+          width: '{{integer(2, 6)}}',
+          height: '{{integer(2, 6)}}'
+        }
+      }],
+      intra_uterine_pregnancy_present: '{{bool()}}',
+      gestational_sack: {
+        size: '{{floating(7, 25, 2)}}'
+      },
+      yolk_sack_present: '{{bool()}}',
+      crown_rump_length: '{{floating(7, 25, 2)}}',
+      fetal_heart_rate_present: '{{bool()}}',
+      estimated_gestational_age_in_days: '{{integer(1, 280)}}',
+      adnexal_masses: [{
+        side: '{{random("left", "right")}}',
+        size: '{{floating(1, 6, 2)}}',
+        location: '{{random("ovarian", "falopian", "cornual", "unspecified")}}'
+      }],
+      free_fluid_amount: '{{random("none", "trace", "small", "moderate", "large")}}'
+    }],
+    beta_readings: [
+      '{{repeat(1, 15)}}',
+      {
+      date: '{{date(new Date(2019, 0, 10), new Date(), "YYYY-MM-dd")}}',
+        level: '{{integer(0, 50000)}}'
+    }],
+    methotrexate_doses: [
+      '{{repeat(0, 2)}}',
+      {
+      date: '{{date(new Date(2019, 0, 10), new Date(), "YYYY-MM-dd")}}',
+        quantity: '{{integer(80, 120)}}'
+    }],
+    pathology_results: {
+      date: '{{date(new Date(2019, 0, 10), new Date(), "YYYY-MM-dd")}}',
+      products_of_conception: '{{bool()}}',
+      comments: '{{lorem(15, "words")}}'
+    },
+    patient_interactions: [
+      '{{repeat(0, 20)}}',
+      {
+        date: '{{date(new Date(2019, 0, 10), new Date(), "YYYY-MM-dd")}}',
+        doctor_visit: {
+          mva_performed: '{{bool()}}',
+          sonogram_performed: '{{bool()}}',
+          no_action_performed: '{{bool()}}',
+          other_actions_performed: '{{bool()}}'
+        },
+        certified_letter_sent: '{{bool()}}',
+        phone_calls: 
+        [
+          '{{repeat(0, 10)}}',
+          {
+            phone_number_called: '{{phone()}}',
+            call_successful: '{{bool()}}',
+            message_left: '{{bool()}}',
+            unable_to_reach: '{{bool()}}'
+          }
+        ],
+        emergency_department_visit: {
+          sonogram_performed: '{{bool()}}',
+          beta_levels_measured: '{{bool()}}',
+          other_action_performed: '{{lorem(10, "words")}}'
+        }
+    }],
+    follow_up_plans: [
+      '{{repeat(0, 15)}}',
+      {
+      start_date: '{{date(new Date(2019, 0, 10), new Date(), "YYYY-MM-dd")}}',
+      due_date: '{{date(new Date(2019, 0, 10), new Date(), "YYYY-MM-dd")}}',
+      repeat_beta: '{{bool()}}',
+      sonogram: '{{bool()}}',
+      mva: '{{bool()}}',
+      family_planning_appointment: '{{bool()}}',
+      refer_to_prenatal_care: '{{bool()}}'
+    }]
+  }
+]

@@ -1,10 +1,17 @@
-<div fxLayout="row" fxLayoutGap="10px">
-    <bl-input fxFlex="20" label="Gravity" type="number"></bl-input>
-    <bl-input fxFlex="20" label="Full-Term Births" type="number"></bl-input>
-    <bl-input fxFlex="20" label="Pre-Term Births" type="number"></bl-input>
-    <bl-input fxFlex="20" label="Abortions" type="number"></bl-input>
-    <bl-input fxFlex="20" label="Living Children" type="number"></bl-input>
+<div [formGroup]="presentationFormGroup" *ngIf="presentation | async">
+    <div fxLayout="row" fxLayoutGap="10px">
+        <bl-input fxFlex="20" label="Gravity" type="number" [control]="controls.gravity"></bl-input>
+        <bl-input fxFlex="20" label="Full-Term Births" type="number" [control]="controls.parity.num_full_term_births">
+        </bl-input>
+        <bl-input fxFlex="20" label="Pre-Term Births" type="number" [control]="controls.parity.num_pre_term_births">
+        </bl-input>
+        <bl-input fxFlex="20" label="Abortions" type="number" [control]="controls.parity.num_abortions"></bl-input>
+        <bl-input fxFlex="20" label="Living Children" type="number" [control]="controls.parity.num_living_children">
+        </bl-input>
+    </div>
+    <bl-date-picker label="LMP" [control]="controls.last_menstrual_period"></bl-date-picker>
+    <bl-select label="Presenting Symptoms" [options]="presentingSymptomOptions"
+        [control]="controls.presenting_symptoms">
+    </bl-select>
+    <!-- <bl-input label="Other Presenting Symptoms"></bl-input> -->
 </div>
-<bl-date-picker label="LMP"></bl-date-picker>
-<bl-select label="Presenting Symptoms" [options]="presentingSymptomOptions"></bl-select>
-<bl-input label="Other Presenting Symptoms"></bl-input>

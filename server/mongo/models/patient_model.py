@@ -64,17 +64,17 @@ class TransvaginalUltrasound(EmbeddedDocument):
 
 
 class BetaReading(EmbeddedDocument):
-    reading_date = StringField()
+    date = StringField()
     level = IntField()
 
 
 class MethotrexateDose(EmbeddedDocument):
-    administration_date = StringField()
+    date = StringField()
     quantity = IntField()
 
 
 class PathologyResult(EmbeddedDocument):
-    result_date = StringField()
+    date = StringField()
     products_of_conception = BooleanField()
     comments = StringField()
 
@@ -100,7 +100,7 @@ class EmergencyDepartmentVisit(EmbeddedDocument):
 
 
 class PatientInteraction(EmbeddedDocument):
-    interaction_date = StringField()
+    date = StringField()
     doctor_visit = EmbeddedDocumentField(DoctorVisit)
     certified_letter_sent = BooleanField()
     phone_calls = ListField(EmbeddedDocumentField(PhoneCall))

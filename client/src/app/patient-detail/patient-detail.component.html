@@ -1,10 +1,11 @@
 <form [formGroup]="form" *ngIf="patient | async">
     <div fxLayout="column" fxLayoutGap="10px">
-        <bl-general-patient-details [parentForm]="form" (formGroupChange)="onChange($event)"></bl-general-patient-details>
-        <!-- <bl-pregnancy-details></bl-pregnancy-details>
-        <bl-presentation-details></bl-presentation-details>
-        <bl-beta-details></bl-beta-details>
-        <bl-transvaginal-ultrasound-details></bl-transvaginal-ultrasound-details>
+        <bl-general-patient-details [parentForm]="form"></bl-general-patient-details>
+        <bl-pregnancy-details [parentForm]="form"></bl-pregnancy-details>
+        <bl-presentation-details [parentForm]="form"></bl-presentation-details>
+        <bl-beta-readings-details [parentForm]="form"></bl-beta-readings-details>
+        <bl-pathology-results-details [parentForm]="form"></bl-pathology-results-details>
+        <!--<bl-transvaginal-ultrasound-details></bl-transvaginal-ultrasound-details>
         <bl-patient-interaction-details></bl-patient-interaction-details>
         <bl-follow-up-details></bl-follow-up-details> -->
         <!-- <div fxLayout="row" fxLayoutGap="10px">

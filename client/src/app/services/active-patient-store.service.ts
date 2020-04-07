@@ -5,12 +5,16 @@ import { PatientsService } from './patients.service';
 import { Patient } from '../models/patient.model';
 import { GeneralPatientDetails } from '../models/general-patient-details.model';
 import { Observable } from 'rxjs';
+import { BetaReading } from '../models/beta-reading.model';
+import { PathologyResults } from '../models/pathology-results.model';
+import { Pregnancy } from '../models/pregnancy.model';
+import { Presentation } from '../models/presentation.model';
 
 @Injectable({ providedIn: 'root' })
 export class ActivePatientStoreService {
 
 
-  constructor(private patientsService: PatientsService) {
+  constructor() {
   }
 
   // - We set the initial state in BehaviorSubject's constructor
@@ -27,7 +31,22 @@ export class ActivePatientStoreService {
     .pipe(
       map(patient => patient.general_patient_details)
     );
-
+  readonly betaReadings$: Observable<BetaReading[]> = this.activePatient$
+    .pipe(
+      map(patient => patient.beta_readings)
+    );
+  readonly pathologyResults$: Observable<PathologyResults> = this.activePatient$
+    .pipe(
+      map(patient => patient.pathology_results)
+    );
+  readonly pregnancy$: Observable<Pregnancy> = this.activePatient$
+    .pipe(
+      map(patient => patient.pregnancy)
+    );
+  readonly presentation$: Observable<Presentation> = this.activePatient$
+    .pipe(
+      map(patient => patient.presentation)
+    );
   // // we'll compose the todos$ observable with map operator to create a stream of only completed todos
   // readonly completedTodos$ = this.todos$.pipe(
   //   map(todos => todos.filter(todo => todo.isCompleted))
@@ -47,12 +66,10 @@ export class ActivePatientStoreService {
     this.ActivePatient.next(val);
   }
 
-  // the getter will return the last value emitted in _todos subject
   get generalPatientDetails(): GeneralPatientDetails {
     return this.ActivePatient.getValue().general_patient_details;
   }
-  // assigning a value to this.todos will push it onto the observable
-  // and down to all of its subsribers (ex: this.todos = [])
+
   set generalPatientDetails(val: GeneralPatientDetails) {
     const activepatient = this.activePatient;
 
@@ -60,4 +77,46 @@ export class ActivePatientStoreService {
     this.ActivePatient.next(activepatient);
   }
 
+  get betaReadings(): BetaReading[] {
+    return this.ActivePatient.getValue().beta_readings;
+  }
+
+  set betaReadings(val: BetaReading[]) {
+    const activepatient = this.activePatient;
+
+    activepatient.beta_readings = val;
+    this.ActivePatient.next(activepatient);
+  }
+  get pathologyResults(): PathologyResults {
+    return this.ActivePatient.getValue().pathology_results;
+  }
+
+  set pathologyResults(val: PathologyResults) {
+    const activepatient = this.activePatient;
+
+    activepatient.pathology_results = val;
+    this.ActivePatient.next(activepatient);
+  }
+
+  get pregnancy(): Pregnancy {
+    return this.ActivePatient.getValue().pregnancy;
+  }
+
+  set pregnancy(val: Pregnancy) {
+    const activepatient = this.activePatient;
+
+    activepatient.pregnancy = val;
+    this.ActivePatient.next(activepatient);
+  }
+
+  get presentation(): Presentation {
+    return this.ActivePatient.getValue().presentation;
+  }
+
+  set presentation(val: Presentation) {
+    const activepatient = this.activePatient;
+
+    activepatient.presentation = val;
+    this.ActivePatient.next(activepatient);
+  }
 }

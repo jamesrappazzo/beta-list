@@ -23,10 +23,11 @@ import { PregnancyDetailsComponent } from './patient-detail/pregnancy-details/pr
 import { PatientInteractionDetailsComponent } from './patient-detail/patient-interaction-details/patient-interaction-details.component';
 import { GeneralPatientDetailsComponent } from './patient-detail/general-patient-details/general-patient-details.component';
 import { FollowUpDetailsComponent } from './patient-detail/follow-up-details/follow-up-details.component';
-import { BetaDetailsComponent } from './patient-detail/beta-details/beta-details.component';
+import { BetaReadingsDetailsComponent } from './patient-detail/beta-readings-details/beta-readings-details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PatientsService } from './services/patients.service';
 import { ActivePatientStoreService } from './services/active-patient-store.service';
+import { PathologyResultsDetailsComponent } from './patient-detail/pathology-details/pathology-details.component';
 
 @NgModule({
   declarations: [
@@ -45,8 +46,8 @@ import { ActivePatientStoreService } from './services/active-patient-store.servi
     PatientInteractionDetailsComponent,
     GeneralPatientDetailsComponent,
     FollowUpDetailsComponent,
-    BetaDetailsComponent
-  ],
+    BetaReadingsDetailsComponent,
+    PathologyResultsDetailsComponent],
   imports: [
     FlexLayoutModule,
     BrowserModule,

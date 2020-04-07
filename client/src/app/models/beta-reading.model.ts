@@ -1,4 +1,4 @@
 export interface BetaReading {
-    reading_date: string;
+    date: string;
     level: number;
 }
