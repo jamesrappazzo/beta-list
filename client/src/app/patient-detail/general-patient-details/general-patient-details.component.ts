@@ -18,7 +18,7 @@ export class GeneralPatientDetailsComponent implements OnInit, OnDestroy {
   @Output() formGroupChange: EventEmitter<FormGroup> = new EventEmitter<FormGroup>();
   generalPatientDetails: Observable<GeneralPatientDetails>;
   private unsubscribe: Subject<void> = new Subject();
-  constructor(private patientsService: PatientsService, private activePatientStoreService: ActivePatientStoreService) { }
+  constructor(private activePatientStoreService: ActivePatientStoreService) { }
 
   controls = {
     first_name: new FormControl('', Validators.required),
