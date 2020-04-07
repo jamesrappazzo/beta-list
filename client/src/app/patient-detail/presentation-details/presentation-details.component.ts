@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 import {
   presentingSymptomOptions
 } from '../../maps/index';
@@ -13,7 +13,7 @@ import { Presentation } from 'src/app/models/presentation.model';
   templateUrl: './presentation-details.component.html',
   styleUrls: ['./presentation-details.component.css']
 })
-export class PresentationDetailsComponent implements OnInit {
+export class PresentationDetailsComponent implements OnInit, OnDestroy {
   presentingSymptomOptions: any = presentingSymptomOptions.map;
   presentationFormGroup: FormGroup;
   @Input() parentForm: FormGroup;
