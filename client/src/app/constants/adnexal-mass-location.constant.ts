@@ -1,5 +1,5 @@
 export enum values {
-    cornual = 'cornual',
-    falopian = 'falopian',
-    unspecified = 'unspecified',
+    Ovarian = 'Ovarian',
+    LateralToOvary = 'LateralToOvary',
+    Unclear = 'Unclear',
 }

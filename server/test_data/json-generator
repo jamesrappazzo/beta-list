@@ -12,7 +12,7 @@
     pregnancy: {
       desired: '{{bool()}}',
       rh_positive: '{{bool()}}',
-      birth_control_method: '{{random("nexplanon", "IUD", "Condom", "Pill", "Patch", "Declines")}}'
+      birth_control_method: '{{random("Nexplanon", "Iud", "Condom", "Ocp", "Patch", "Declines", "Ring", "Btl")}}'
   },
     presentation: {
       gravity: '{{integer(1, 5)}}',
@@ -25,7 +25,7 @@
       last_menstrual_period: '{{date(new Date(2019, 0, 1), new Date(), "YYYY-MM-dd")}}',
       presenting_symptoms: [
       '{{repeat(1,2)}}',
-      '{{random("cramps", "abdominal pain", "bleeding")}}'
+      '{{random("Cramps", "AbdominalPain", "Bleeding")}}'
     ]
     },
     transvaginal_ultrasound: [
@@ -33,7 +33,7 @@
       {
       date: '{{date(new Date(2019, 0, 10), new Date(), "YYYY-MM-dd")}}',
       uterus: {
-        orientation: '{{random("anteverted", "retroverted", "midposition")}}',
+        orientation: '{{random("Anteverted", "Retroverted", "Midposition")}}',
         dimensions: {
           length: '{{integer(5, 15)}}',
           width: '{{integer(5, 15)}}',
@@ -66,11 +66,11 @@
       fetal_heart_rate_present: '{{bool()}}',
       estimated_gestational_age_in_days: '{{integer(1, 280)}}',
       adnexal_masses: [{
-        side: '{{random("left", "right")}}',
+        side: '{{random("Left", "Right")}}',
         size: '{{floating(1, 6, 2)}}',
-        location: '{{random("ovarian", "falopian", "cornual", "unspecified")}}'
+        location: '{{random("Ovarian", "LateralToOvary", "Unclear")}}'
       }],
-      free_fluid_amount: '{{random("none", "trace", "small", "moderate", "large")}}'
+      free_fluid_amount: '{{random("None", "Minimal", "Moderate", "Significant")}}'
     }],
     beta_readings: [
       '{{repeat(1, 15)}}',

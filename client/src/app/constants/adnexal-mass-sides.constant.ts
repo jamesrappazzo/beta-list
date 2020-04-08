@@ -1,4 +1,4 @@
 export enum values {
-    left = 'left',
-    right = 'right'
+    Left = 'Left',
+    Right = 'Right'
 }

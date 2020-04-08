@@ -1,6 +1,6 @@
 export enum values {
-    none = 'none',
-    minimal = 'minimal',
-    moderate = 'moderate',
-    significant = 'significant'
+    None = 'None',
+    Minimal = 'Minimal',
+    Moderate = 'Moderate',
+    Significant = 'Significant'
 }
