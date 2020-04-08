@@ -1,5 +1,5 @@
 
 export interface MethotrexateDose {
-    administration_date: string;
+    date: string;
     quantity: number;
 }

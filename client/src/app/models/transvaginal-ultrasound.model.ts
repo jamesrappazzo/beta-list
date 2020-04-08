@@ -4,7 +4,7 @@ import { GestationalSack } from './gestational-sack.model';
 import { AdnexalMass } from './adnexal-mass.model';
 
 export interface TransvaginalUltrasound {
-    ultrasound_date: string;
+    date: string;
     uterus: Uterus;
     ovaries: Ovary[];
     intra_uterine_pregnancy_present: boolean;

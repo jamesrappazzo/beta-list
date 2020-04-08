@@ -50,7 +50,7 @@ class AdnexalMass(EmbeddedDocument):
 
 
 class TransvaginalUltrasound(EmbeddedDocument):
-    ultrasound_date = StringField()
+    date = StringField()
     uterus = EmbeddedDocumentField(Uterus)
     ovaries = ListField(EmbeddedDocumentField(Ovary))
     intra_uterine_pregnancy_present = BooleanField()

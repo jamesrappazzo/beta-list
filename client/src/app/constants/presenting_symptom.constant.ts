@@ -1,5 +1,5 @@
 export enum values {
-    AbdominalPainOrCramping = 'AbdominalPainOrCramping',
-    VaginalBleeding = 'VaginalBleeding',
+    cramps = 'cramps',
+    bleeding = 'bleeding',
     Other = 'Other'
 }

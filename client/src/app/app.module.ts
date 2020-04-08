@@ -28,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PatientsService } from './services/patients.service';
 import { ActivePatientStoreService } from './services/active-patient-store.service';
 import { PathologyResultsDetailsComponent } from './patient-detail/pathology-details/pathology-details.component';
+import { MethotrexateDetailsComponent } from './patient-detail/methotrexate-details/methotrexate-details.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { PathologyResultsDetailsComponent } from './patient-detail/pathology-det
     GeneralPatientDetailsComponent,
     FollowUpDetailsComponent,
     BetaReadingsDetailsComponent,
+    MethotrexateDetailsComponent,
     PathologyResultsDetailsComponent],
   imports: [
     FlexLayoutModule,

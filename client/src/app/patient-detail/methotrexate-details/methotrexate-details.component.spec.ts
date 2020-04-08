@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { TransvaginalUltrasoundDetailsComponent } from './transvaginal-ultrasound-details.component';
+import { MethotrexateDetailsComponent } from './methotrexate-details.component';
 
 
 describe('BetaDetailsComponent', () => {
-  let component: TransvaginalUltrasoundDetailsComponent;
-  let fixture: ComponentFixture<TransvaginalUltrasoundDetailsComponent>;
+  let component: MethotrexateDetailsComponent;
+  let fixture: ComponentFixture<MethotrexateDetailsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [TransvaginalUltrasoundDetailsComponent]
+      declarations: [MethotrexateDetailsComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TransvaginalUltrasoundDetailsComponent);
+    fixture = TestBed.createComponent(MethotrexateDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

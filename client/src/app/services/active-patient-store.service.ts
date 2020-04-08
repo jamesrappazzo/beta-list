@@ -9,6 +9,8 @@ import { BetaReading } from '../models/beta-reading.model';
 import { PathologyResults } from '../models/pathology-results.model';
 import { Pregnancy } from '../models/pregnancy.model';
 import { Presentation } from '../models/presentation.model';
+import { MethotrexateDose } from '../models/methotrexate-dose.model';
+import { TransvaginalUltrasound } from '../models/transvaginal-ultrasound.model';
 
 @Injectable({ providedIn: 'root' })
 export class ActivePatientStoreService {
@@ -35,6 +37,10 @@ export class ActivePatientStoreService {
     .pipe(
       map(patient => patient.beta_readings)
     );
+  readonly methotrexateDoses$: Observable<MethotrexateDose[]> = this.activePatient$
+    .pipe(
+      map(patient => patient.methotrexate_doses)
+    );
   readonly pathologyResults$: Observable<PathologyResults> = this.activePatient$
     .pipe(
       map(patient => patient.pathology_results)
@@ -46,6 +52,10 @@ export class ActivePatientStoreService {
   readonly presentation$: Observable<Presentation> = this.activePatient$
     .pipe(
       map(patient => patient.presentation)
+    );
+  readonly transvaginalUltrasounds$: Observable<TransvaginalUltrasound[]> = this.activePatient$
+    .pipe(
+      map(patient => patient.transvaginal_ultrasound)
     );
   // // we'll compose the todos$ observable with map operator to create a stream of only completed todos
   // readonly completedTodos$ = this.todos$.pipe(
@@ -87,6 +97,17 @@ export class ActivePatientStoreService {
     activepatient.beta_readings = val;
     this.ActivePatient.next(activepatient);
   }
+
+  get methotrexateDoses(): MethotrexateDose[] {
+    return this.ActivePatient.getValue().methotrexate_doses;
+  }
+
+  set methotrexateDoses(val: MethotrexateDose[]) {
+    const activepatient = this.activePatient;
+
+    activepatient.methotrexate_doses = val;
+    this.ActivePatient.next(activepatient);
+  }
   get pathologyResults(): PathologyResults {
     return this.ActivePatient.getValue().pathology_results;
   }
@@ -117,6 +138,16 @@ export class ActivePatientStoreService {
     const activepatient = this.activePatient;
 
     activepatient.presentation = val;
+    this.ActivePatient.next(activepatient);
+  }
+  get transvaginalUltrasounds(): TransvaginalUltrasound[] {
+    return this.ActivePatient.getValue().transvaginal_ultrasound;
+  }
+
+  set transvaginalUltrasounds(val: TransvaginalUltrasound[]) {
+    const activepatient = this.activePatient;
+
+    activepatient.transvaginal_ultrasound = val;
     this.ActivePatient.next(activepatient);
   }
 }

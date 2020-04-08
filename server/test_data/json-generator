@@ -31,7 +31,7 @@
     transvaginal_ultrasound: [
       '{{repeat(0, 4)}}',
       {
-      ultrasound_date: '{{date(new Date(2019, 0, 10), new Date(), "YYYY-MM-dd")}}',
+      date: '{{date(new Date(2019, 0, 10), new Date(), "YYYY-MM-dd")}}',
       uterus: {
         orientation: '{{random("anteverted", "retroverted", "midposition")}}',
         dimensions: {

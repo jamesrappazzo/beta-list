@@ -54,7 +54,7 @@ export class BetaReadingsDetailsComponent implements OnInit, OnDestroy {
   addControlsIfMissing(betaReadings) {
     if (betaReadings.length !== this.controls.length) {
       for (const betaReading of betaReadings) {
-        this.addBetaReadingControls(betaReading.reading_date, betaReading.level);
+        this.addBetaReadingControls(betaReading.date, betaReading.level);
       }
     }
   }

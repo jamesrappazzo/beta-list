@@ -10,7 +10,7 @@
         </bl-input>
     </div>
     <bl-date-picker label="LMP" [control]="controls.last_menstrual_period"></bl-date-picker>
-    <bl-select label="Presenting Symptoms" [options]="presentingSymptomOptions"
+    <bl-select label="Presenting Symptoms" [multiple]="true" [options]="presentingSymptomOptions"
         [control]="controls.presenting_symptoms">
     </bl-select>
     <!-- <bl-input label="Other Presenting Symptoms"></bl-input> -->

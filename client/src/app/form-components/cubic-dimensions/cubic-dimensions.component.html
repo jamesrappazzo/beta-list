@@ -1,6 +1,6 @@
 <div fxLayout="row" fxLayoutGap="10px">
     <mat-label fxFlex="40">{{label}}</mat-label>
-    <bl-input fxFlex="20" label="Length" type="number"></bl-input>
-    <bl-input fxFlex="20" label="Width" type="number"></bl-input>
-    <bl-input fxFlex="20" label="Height" type="number"></bl-input>
+    <bl-input fxFlex="20" label="Length" type="number" [control]="controls.length"></bl-input>
+    <bl-input fxFlex="20" label="Width" type="number" [control]="controls.width"></bl-input>
+    <bl-input fxFlex="20" label="Height" type="number" [control]="controls.height"></bl-input>
 </div>
