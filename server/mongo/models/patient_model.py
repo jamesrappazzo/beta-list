@@ -54,7 +54,7 @@ class TransvaginalUltrasound(EmbeddedDocument):
     uterus = EmbeddedDocumentField(Uterus)
     ovaries = ListField(EmbeddedDocumentField(Ovary))
     intra_uterine_pregnancy_present = BooleanField()
-    gestational_sack = EmbeddedDocumentField(GestationalSack)
+    gestational_sack_size = FloatField()
     yolk_sack_present = BooleanField()
     crown_rump_length = FloatField()
     fetal_heart_rate_present = BooleanField()

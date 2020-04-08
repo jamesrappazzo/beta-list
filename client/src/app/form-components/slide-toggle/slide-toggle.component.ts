@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'bl-slide-toggle',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SlideToggleComponent implements OnInit {
   @Input() label: string;
-
+  @Input() control: FormControl;
   constructor() { }
 
   ngOnInit(): void {

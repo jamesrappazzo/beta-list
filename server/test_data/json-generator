@@ -1,5 +1,5 @@
 [
-  '{{repeat(10)}}',
+  '{{repeat(1)}}',
   {
     general_patient_details:{
     first_name: '{{firstName()}}',
@@ -60,9 +60,7 @@
         }
       }],
       intra_uterine_pregnancy_present: '{{bool()}}',
-      gestational_sack: {
-        size: '{{floating(7, 25, 2)}}'
-      },
+      gestational_sack_size: '{{floating(7, 25, 2)}}',
       yolk_sack_present: '{{bool()}}',
       crown_rump_length: '{{floating(7, 25, 2)}}',
       fetal_heart_rate_present: '{{bool()}}',

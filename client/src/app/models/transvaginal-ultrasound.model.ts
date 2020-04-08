@@ -8,7 +8,7 @@ export interface TransvaginalUltrasound {
     uterus: Uterus;
     ovaries: Ovary[];
     intra_uterine_pregnancy_present: boolean;
-    gestational_sack: GestationalSack;
+    gestational_sack_size: number;
     yolk_sack_present: boolean;
     crown_rump_length: number;
     fetal_heart_rate_present: boolean;
