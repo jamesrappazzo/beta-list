@@ -12,6 +12,7 @@ import { Presentation } from '../models/presentation.model';
 import { MethotrexateDose } from '../models/methotrexate-dose.model';
 import { TransvaginalUltrasound } from '../models/transvaginal-ultrasound.model';
 import { PatientInteraction } from '../models/patient-interaction.model';
+import { FollowUpPlan } from '../models/follow-up-plan.model';
 
 @Injectable({ providedIn: 'root' })
 export class ActivePatientStoreService {
@@ -61,6 +62,10 @@ export class ActivePatientStoreService {
   readonly patientInteractions$: Observable<PatientInteraction[]> = this.activePatient$
     .pipe(
       map(patient => patient.patient_interactions)
+    );
+  readonly followUpPlans$: Observable<FollowUpPlan[]> = this.activePatient$
+    .pipe(
+      map(patient => patient.follow_up_plans)
     );
   // // we'll compose the todos$ observable with map operator to create a stream of only completed todos
   // readonly completedTodos$ = this.todos$.pipe(
@@ -163,6 +168,16 @@ export class ActivePatientStoreService {
     const activepatient = this.activePatient;
 
     activepatient.patient_interactions = val;
+    this.ActivePatient.next(activepatient);
+  }
+  get followUpPlans(): FollowUpPlan[] {
+    return this.ActivePatient.getValue().follow_up_plans;
+  }
+
+  set followUpPlans(val: FollowUpPlan[]) {
+    const activepatient = this.activePatient;
+
+    activepatient.follow_up_plans = val;
     this.ActivePatient.next(activepatient);
   }
 }
