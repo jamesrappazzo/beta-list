@@ -89,33 +89,37 @@
       products_of_conception: '{{bool()}}',
       comments: '{{lorem(15, "words")}}'
     },
-    patient_interactions: [
-      '{{repeat(0, 20)}}',
+    certified_letters: [
+    '{{repeat(0, 5)}}',
+      {
+    date: '{{date(new Date(2019, 0, 10), new Date(), "YYYY-MM-dd")}}'
+      }
+    ],
+    doctor_visits:[
+    '{{repeat(0, 5)}}',
       {
         date: '{{date(new Date(2019, 0, 10), new Date(), "YYYY-MM-dd")}}',
-        doctor_visit: {
-          mva_performed: '{{bool()}}',
-          sonogram_performed: '{{bool()}}',
-          no_action_performed: '{{bool()}}',
-          other_actions_performed: '{{bool()}}'
-        },
-        certified_letter_sent: '{{bool()}}',
-        phone_calls: 
+        actions: [
+        '{{repeat(1,2)}}',
+        '{{random("MVA", "Sonogram", "None", "Other")}}']
+      }
+    ],
+    emergency_department_visit:[
+    '{{repeat(0, 5)}}',
+      {
+        date: '{{date(new Date(2019, 0, 10), new Date(), "YYYY-MM-dd")}}',
+        actions: [
+        '{{repeat(1,2)}}',
+        '{{random("BetaReading", "Sonogram", "Other")}}']
+      }
+    ],
+            phone_calls: 
         [
           '{{repeat(0, 10)}}',
           {
             phone_number_called: '{{phone()}}',
-            call_successful: '{{bool()}}',
-            message_left: '{{bool()}}',
-            unable_to_reach: '{{bool()}}'
-          }
+            result: '{{random("CallSuccessful", "MessageLeft", "UnableToReach", "Other")}}'}
         ],
-        emergency_department_visit: {
-          sonogram_performed: '{{bool()}}',
-          beta_levels_measured: '{{bool()}}',
-          other_action_performed: '{{lorem(10, "words")}}'
-        }
-    }],
     follow_up_plans: [
       '{{repeat(0, 15)}}',
       {

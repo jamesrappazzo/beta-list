@@ -1,11 +1,8 @@
-import { DoctorVisit } from './doctor-visit.model';
-import { PhoneCall } from './phone-call.model';
-import { EmergencyDepartmentVisit } from './emergency-department-visit.model';
+import { patient_interaction_types } from '../constants/index';
 
 export interface PatientInteraction {
-    interaction_date: string;
-    doctor_visit: DoctorVisit;
-    certified_letter_sent: boolean;
-    phone_calls: PhoneCall[];
-    emergency_department_visit: EmergencyDepartmentVisit;
+    date: string;
+    interaction_type: patient_interaction_types.values;
+    options: any;
 }
+

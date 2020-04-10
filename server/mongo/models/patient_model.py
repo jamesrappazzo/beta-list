@@ -1,4 +1,4 @@
-from mongoengine import EmbeddedDocument, EmbeddedDocumentField, IntField, FloatField, ListField, BooleanField, StringField, StringField, DynamicDocument
+from mongoengine import EmbeddedDocument, EmbeddedDocumentField, IntField, FloatField, ListField, BooleanField, DictField, StringField, StringField, DynamicDocument
 
 
 class Pregnancy(EmbeddedDocument):
@@ -78,14 +78,6 @@ class PathologyResult(EmbeddedDocument):
     products_of_conception = BooleanField()
     comments = StringField()
 
-
-class DoctorVisit(EmbeddedDocument):
-    mva_performed = BooleanField()
-    sonogram_performed = BooleanField()
-    no_action_performed = BooleanField()
-    other_actions_performed = BooleanField()
-
-
 class PhoneCall(EmbeddedDocument):
     phone_number_called = StringField()
     call_successful = BooleanField()
@@ -101,11 +93,8 @@ class EmergencyDepartmentVisit(EmbeddedDocument):
 
 class PatientInteraction(EmbeddedDocument):
     date = StringField()
-    doctor_visit = EmbeddedDocumentField(DoctorVisit)
-    certified_letter_sent = BooleanField()
-    phone_calls = ListField(EmbeddedDocumentField(PhoneCall))
-    emergency_department_visit = EmbeddedDocumentField(
-        EmergencyDepartmentVisit)
+    interaction_type = StringField()
+    options = DictField()
 
 
 class FollowUpPlan(EmbeddedDocument):

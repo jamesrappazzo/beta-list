@@ -20,7 +20,7 @@ import {
   TransvaginalUltrasoundDetailsComponent
 } from './patient-detail/transvaginal-ultrasound-details/transvaginal-ultrasound-details.component';
 import { PregnancyDetailsComponent } from './patient-detail/pregnancy-details/pregnancy-details.component';
-import { PatientInteractionDetailsComponent } from './patient-detail/patient-interaction-details/patient-interaction-details.component';
+import { PatientInteractionDetailsComponent } from './patient-detail/patient-interactions-details/patient-interactions-details.component';
 import { GeneralPatientDetailsComponent } from './patient-detail/general-patient-details/general-patient-details.component';
 import { FollowUpDetailsComponent } from './patient-detail/follow-up-details/follow-up-details.component';
 import { BetaReadingsDetailsComponent } from './patient-detail/beta-readings-details/beta-readings-details.component';

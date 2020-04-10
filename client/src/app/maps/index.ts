@@ -7,6 +7,9 @@ import * as freeFluidAmountOptions from './free-fluid-amount-options.map';
 import * as uterusOrientationOptions from './uterus-orientation-options.map';
 import * as adnexalMassSideOptions from './adnexal-mass-side-options.map';
 import * as adnexalMassLocationOptions from './adnexal-mass-location-options.map';
+import * as doctorVisitActionOptions from './doctor-visit-action-options.map';
+import * as emergencyDepartmentActionOptions from './emergency-department-action-options.map';
+import * as phoneCallResultOptions from './phone-call-result-options.map';
 
 export {
     nullableBooleanRadioOptions,
@@ -15,5 +18,8 @@ export {
     freeFluidAmountOptions,
     uterusOrientationOptions,
     adnexalMassSideOptions,
-    adnexalMassLocationOptions
+    adnexalMassLocationOptions,
+    doctorVisitActionOptions,
+    phoneCallResultOptions,
+    emergencyDepartmentActionOptions
 };
