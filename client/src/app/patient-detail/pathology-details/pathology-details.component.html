@@ -1,11 +1,15 @@
-<div [formGroup]="pathologyResultsFormGroup" *ngIf="pathologyResults | async">
+<bl-expansion-panel>
+    <div title>Pathology</div>
+    <div description></div>
+    <div body [formGroup]="pathologyResultsFormGroup" *ngIf="pathologyResults | async">
 
-    <!-- add a toggle to hide this -->
-    <!-- Begin Pathology Result -->
-    <bl-date-picker label="Date" [control]="controls.date"></bl-date-picker>
-    <bl-select label="Products of Conception Found" [control]="controls.products_of_conception"
-        [options]="nullableBooleanRadioOptions">
-    </bl-select>
-    <bl-text-area label="Comments" [control]="controls.comments"></bl-text-area>
-    <!-- End Pathology Result -->
-</div>
+        <!-- add a toggle to hide this -->
+        <!-- Begin Pathology Result -->
+        <bl-date-picker label="Date" [control]="controls.date"></bl-date-picker>
+        <bl-select label="Products of Conception Found" [control]="controls.products_of_conception"
+            [options]="nullableBooleanRadioOptions">
+        </bl-select>
+        <bl-text-area label="Comments" [control]="controls.comments"></bl-text-area>
+        <!-- End Pathology Result -->
+    </div>
+</bl-expansion-panel>

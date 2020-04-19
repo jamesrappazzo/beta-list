@@ -6,9 +6,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core'
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
     exports: [
@@ -20,7 +21,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
         MatRadioModule,
         MatSlideToggleModule,
         ObserversModule,
-        PlatformModule
+        PlatformModule,
+        MatExpansionModule
     ]
 })
 export class CustomMaterialModule { }

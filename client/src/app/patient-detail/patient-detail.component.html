@@ -1,3 +1,4 @@
+<mat-accordion>
 <form [formGroup]="form" *ngIf="patient | async">
     <div fxLayout="column" fxLayoutGap="10px">
         <bl-general-patient-details [parentForm]="form"></bl-general-patient-details>
@@ -11,3 +12,4 @@
         <bl-follow-up-details [parentForm]="form"></bl-follow-up-details>
     </div>
 </form>
+</mat-accordion>

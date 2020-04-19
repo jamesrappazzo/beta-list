@@ -29,6 +29,7 @@ import { PatientsService } from './services/patients.service';
 import { ActivePatientStoreService } from './services/active-patient-store.service';
 import { PathologyResultsDetailsComponent } from './patient-detail/pathology-details/pathology-details.component';
 import { MethotrexateDetailsComponent } from './patient-detail/methotrexate-details/methotrexate-details.component';
+import { ExpansionPanelComponent } from './form-components/expansion-panel/expansion-panel.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { MethotrexateDetailsComponent } from './patient-detail/methotrexate-deta
     FollowUpDetailsComponent,
     BetaReadingsDetailsComponent,
     MethotrexateDetailsComponent,
-    PathologyResultsDetailsComponent],
+    PathologyResultsDetailsComponent,
+    ExpansionPanelComponent],
   imports: [
     FlexLayoutModule,
     BrowserModule,

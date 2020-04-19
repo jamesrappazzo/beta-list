@@ -1,26 +1,30 @@
-<div [formGroup]="parentForm">
-    <div formArrayName="patientInteractionsFormArray" *ngIf="patientInteractions | async">
-        <div *ngFor="let item of controls; let i = index;">
-            <!-- Begin Patient Interation -->
-            <bl-date-picker label="Interaction Date" [control]="controls[i].date"></bl-date-picker>
-            <bl-input label="Interaction Type" [control]="controls[i].interaction_type"></bl-input>
-            <div *ngIf="controls[i].interaction_type.value === 'DoctorVisit'">
-                <bl-select label="Doctor Visit Actions" [multiple]="true" [options]="doctorVisitActionOptions"
-                    [control]="controls[i].options.actions">
-                </bl-select>
-            </div>
-            <div *ngIf="controls[i].interaction_type.value === 'EmergencyDepartmentVisit'">
-                <bl-select label="Doctor Visit Actions" [multiple]="true" [options]="emergencyDepartmentActionOptions"
-                    [control]="controls[i].options.actions">
-                </bl-select>
-            </div>
-            <div *ngIf="controls[i].interaction_type.value === 'PhoneCall'">
-                <bl-input label="Phone Number Called" [control]="controls[i].options.phone_number_called"></bl-input>
-
-                <bl-select label="Result" [options]="phoneCallResultOptions"
-                [control]="controls[i].options.result">
-                </bl-select>
+<bl-expansion-panel>
+    <div title>Patient Interactions</div>
+    <div description></div>
+    <div body [formGroup]="parentForm">
+        <div formArrayName="patientInteractionsFormArray" *ngIf="patientInteractions | async">
+            <div *ngFor="let item of controls; let i = index;">
+                <!-- Begin Patient Interation -->
+                <bl-date-picker label="Interaction Date" [control]="controls[i].date"></bl-date-picker>
+                <bl-input label="Interaction Type" [control]="controls[i].interaction_type"></bl-input>
+                <div *ngIf="controls[i].interaction_type.value === 'DoctorVisit'">
+                    <bl-select label="Doctor Visit Actions" [multiple]="true" [options]="doctorVisitActionOptions"
+                        [control]="controls[i].options.actions">
+                    </bl-select>
+                </div>
+                <div *ngIf="controls[i].interaction_type.value === 'EmergencyDepartmentVisit'">
+                    <bl-select label="Doctor Visit Actions" [multiple]="true" [options]="emergencyDepartmentActionOptions"
+                        [control]="controls[i].options.actions">
+                    </bl-select>
+                </div>
+                <div *ngIf="controls[i].interaction_type.value === 'PhoneCall'">
+                    <bl-input label="Phone Number Called" [control]="controls[i].options.phone_number_called"></bl-input>
+    
+                    <bl-select label="Result" [options]="phoneCallResultOptions"
+                    [control]="controls[i].options.result">
+                    </bl-select>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</bl-expansion-panel>

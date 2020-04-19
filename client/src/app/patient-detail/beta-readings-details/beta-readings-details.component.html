@@ -1,10 +1,14 @@
-<div [formGroup]="parentForm">
-    <div formArrayName="betaReadingsDetailsFormArray" *ngIf="betaReadingsDetails | async">
-        <div *ngFor="let item of controls; let i = index;">
-            <div [formGroupName]="i" fxLayout="row" fxLayoutGap="10px">
-                <bl-date-picker fxFlex="50" label="Date" [control]="controls[i].date"></bl-date-picker>
-                <bl-input fxFlex="50" label="Level" type="number" [control]="controls[i].level"></bl-input>
+<bl-expansion-panel>
+    <div title>Beta Readings</div>
+    <div description></div>
+    <div body [formGroup]="parentForm">
+        <div formArrayName="betaReadingsDetailsFormArray" *ngIf="betaReadingsDetails | async">
+            <div *ngFor="let item of controls; let i = index;">
+                <div [formGroupName]="i" fxLayout="row" fxLayoutGap="10px">
+                    <bl-date-picker fxFlex="50" label="Date" [control]="controls[i].date"></bl-date-picker>
+                    <bl-input fxFlex="50" label="Level" type="number" [control]="controls[i].level"></bl-input>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</bl-expansion-panel>

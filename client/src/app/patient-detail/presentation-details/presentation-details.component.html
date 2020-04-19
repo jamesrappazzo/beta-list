@@ -1,17 +1,23 @@
-<div [formGroup]="presentationFormGroup" *ngIf="presentation | async">
-    <div fxLayout="row" fxLayoutGap="10px">
-        <bl-input fxFlex="20" label="Gravity" type="number" [control]="controls.gravity"></bl-input>
-        <bl-input fxFlex="20" label="Full-Term Births" type="number" [control]="controls.parity.num_full_term_births">
-        </bl-input>
-        <bl-input fxFlex="20" label="Pre-Term Births" type="number" [control]="controls.parity.num_pre_term_births">
-        </bl-input>
-        <bl-input fxFlex="20" label="Abortions" type="number" [control]="controls.parity.num_abortions"></bl-input>
-        <bl-input fxFlex="20" label="Living Children" type="number" [control]="controls.parity.num_living_children">
-        </bl-input>
+<bl-expansion-panel>
+    <div title>Presentation</div>
+    <div description></div>
+    <div body [formGroup]="presentationFormGroup" *ngIf="presentation | async">
+        <div fxLayout="row" fxLayoutGap="10px grid">
+            <bl-input fxFlex="20" label="Gravity" type="number" [control]="controls.gravity"></bl-input>
+            <bl-input fxFlex="20" label="Full-Term Births" type="number"
+                [control]="controls.parity.num_full_term_births">
+            </bl-input>
+            <bl-input fxFlex="20" label="Pre-Term Births" type="number" [control]="controls.parity.num_pre_term_births">
+            </bl-input>
+            <bl-input fxFlex="20" label="# Abortions" type="number" [control]="controls.parity.num_abortions">
+            </bl-input>
+            <bl-input fxFlex="20" label="Living Children" type="number" [control]="controls.parity.num_living_children">
+            </bl-input>
+        </div>
+        <bl-date-picker label="Last Menstrual Period" [control]="controls.last_menstrual_period"></bl-date-picker>
+        <bl-select label="Presenting Symptoms" [multiple]="true" [options]="presentingSymptomOptions"
+            [control]="controls.presenting_symptoms">
+        </bl-select>
+        <!-- <bl-input label="Other Presenting Symptoms"></bl-input> -->
     </div>
-    <bl-date-picker label="LMP" [control]="controls.last_menstrual_period"></bl-date-picker>
-    <bl-select label="Presenting Symptoms" [multiple]="true" [options]="presentingSymptomOptions"
-        [control]="controls.presenting_symptoms">
-    </bl-select>
-    <!-- <bl-input label="Other Presenting Symptoms"></bl-input> -->
-</div>
+</bl-expansion-panel>

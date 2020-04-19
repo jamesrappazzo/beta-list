@@ -1,13 +1,17 @@
-<div [formGroup]="generalPatientDetailsFormGroup" *ngIf="generalPatientDetails | async">
-    <div fxLayout="row" fxLayoutGap="10px">
-        <bl-input fxFlex="50" label="First Name" [control]="controls.first_name"></bl-input>
-        <bl-input fxFlex="50" label="Last Name" [control]="controls.last_name"></bl-input>
+<bl-expansion-panel>
+    <div title>General</div>
+    <div description>{{controls.first_name.value}} {{controls.last_name.value}}</div>
+    <div body [formGroup]="generalPatientDetailsFormGroup" *ngIf="generalPatientDetails | async">
+        <div fxLayout="row" fxLayoutGap="10px">
+            <bl-input fxFlex="50" label="First Name" [control]="controls.first_name"></bl-input>
+            <bl-input fxFlex="50" label="Last Name" [control]="controls.last_name"></bl-input>
+        </div>
+        <bl-input label="Phone Number" [control]="controls.phone_number"></bl-input>
+        <div fxLayout="row" fxLayoutGap="10px">
+            <bl-input fxFlex="50" label="MRN" [control]="controls.medical_record_number"></bl-input>
+            <bl-date-picker fxFlex="50" label="Date of Birth" [control]="controls.date_of_birth"></bl-date-picker>
+        </div>
+        <bl-input label="Attending Last Name" [control]="controls.attending_physician_last_name"></bl-input>
     </div>
-    <bl-input label="Phone Number" [control]="controls.phone_number"></bl-input>
-    <div fxLayout="row" fxLayoutGap="10px">
-        <bl-input fxFlex="50" label="MRN" [control]="controls.medical_record_number"></bl-input>
-        <bl-date-picker fxFlex="50" label="Date of Birth" [control]="controls.date_of_birth"></bl-date-picker>
-    </div>
+</bl-expansion-panel>
 
-    <bl-input label="Attending Last Name" [control]="controls.attending_physician_last_name"></bl-input>
-</div>

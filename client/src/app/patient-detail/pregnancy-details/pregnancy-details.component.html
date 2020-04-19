@@ -1,9 +1,13 @@
-<div [formGroup]="pregnancyFormGroup" *ngIf="pregnancy | async">
-
-    <bl-select label="Pregnancy Desired" [control]="controls.desired" [options]="nullableBooleanRadioOptions">
-    </bl-select>
-    <bl-select label="RH Positive" [control]="controls.rh_positive" [options]="nullableBooleanRadioOptions"></bl-select>
-    <bl-select label="Birth Control Method" [control]="controls.birth_control_method"
-        [options]="birthControlMethodOptions"></bl-select>
-    <!-- <bl-input label="Other Birth Control Method"></bl-input> -->
-</div>
+<bl-expansion-panel>
+    <div title>Pregnancy</div>
+    <div description>{{controls.desired.value}} {{controls.rh_positive.value}} {{controls.birth_control_method.value}}</div>
+    <div body [formGroup]="pregnancyFormGroup" *ngIf="pregnancy | async">
+        <bl-select label="Pregnancy Desired" [control]="controls.desired" [options]="nullableBooleanRadioOptions">
+        </bl-select>
+        <bl-select label="RH Positive" [control]="controls.rh_positive" [options]="nullableBooleanRadioOptions">
+        </bl-select>
+        <bl-select label="Birth Control Method" [control]="controls.birth_control_method"
+            [options]="birthControlMethodOptions"></bl-select>
+        <!-- <bl-input label="Other Birth Control Method"></bl-input> -->
+    </div>
+</bl-expansion-panel>

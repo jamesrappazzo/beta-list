@@ -1,25 +1,29 @@
-<div [formGroup]="parentForm">
-    <div formArrayName="followUpPlansFormArray" *ngIf="followUpPlans | async">
-        <div *ngFor="let item of controls; let i = index;">
-            <div [formGroupName]="i" fxLayout="row" fxLayoutGap="10px">
-                <bl-date-picker fxFlex="50" label="Start Date" [control]="controls[i].start_date">
-                </bl-date-picker>
-                <bl-date-picker fxFlex="50" label="Due Date" type="number" [control]="controls[i].due_date">
-                </bl-date-picker>
-                <bl-select label="Repeat Beta" [control]="controls[i].repeat_beta"
-                    [options]="nullableBooleanRadioOptions">
-                </bl-select>
-                <bl-select label="Sonogram" [control]="controls[i].sonogram" [options]="nullableBooleanRadioOptions">
-                </bl-select>
-                <bl-select label="MVA" [control]="controls[i].mva" [options]="nullableBooleanRadioOptions">
-                </bl-select>
-                <bl-select label="Family Planning Appointment" [control]="controls[i].family_planning_appointment"
-                    [options]="nullableBooleanRadioOptions">
-                </bl-select>
-                <bl-select label="Refer To Prenatal Care" [control]="controls[i].refer_to_prenatal_care"
-                    [options]="nullableBooleanRadioOptions">
-                </bl-select>
+<bl-expansion-panel>
+    <div title>Follow Up Details</div>
+    <div description></div>
+    <div body [formGroup]="parentForm">
+        <div formArrayName="followUpPlansFormArray" *ngIf="followUpPlans | async">
+            <div *ngFor="let item of controls; let i = index;">
+                <div [formGroupName]="i" fxLayout="row" fxLayoutGap="10px">
+                    <bl-date-picker fxFlex="50" label="Start Date" [control]="controls[i].start_date">
+                    </bl-date-picker>
+                    <bl-date-picker fxFlex="50" label="Due Date" type="number" [control]="controls[i].due_date">
+                    </bl-date-picker>
+                    <bl-select label="Repeat Beta" [control]="controls[i].repeat_beta"
+                        [options]="nullableBooleanRadioOptions">
+                    </bl-select>
+                    <bl-select label="Sonogram" [control]="controls[i].sonogram" [options]="nullableBooleanRadioOptions">
+                    </bl-select>
+                    <bl-select label="MVA" [control]="controls[i].mva" [options]="nullableBooleanRadioOptions">
+                    </bl-select>
+                    <bl-select label="Family Planning Appointment" [control]="controls[i].family_planning_appointment"
+                        [options]="nullableBooleanRadioOptions">
+                    </bl-select>
+                    <bl-select label="Refer To Prenatal Care" [control]="controls[i].refer_to_prenatal_care"
+                        [options]="nullableBooleanRadioOptions">
+                    </bl-select>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</bl-expansion-panel>

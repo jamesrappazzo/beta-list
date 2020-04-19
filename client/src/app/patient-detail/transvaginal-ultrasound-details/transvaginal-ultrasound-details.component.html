@@ -1,56 +1,60 @@
-<div [formGroup]="parentForm">
-    <div formArrayName="methotrexateDetailsFormArray" *ngIf="transvaginalUltrasoundDetails | async">
-        <div *ngFor="let item of controls; let i = index;">
-            <bl-date-picker label="Ultrasound Date" [control]="controls[i].date"></bl-date-picker>
-            <!-- Begin Uterus -->
-            <bl-select label="Uterus Orientation" [options]="uterusOrientationOptions"
-                [control]="controls[i].uterus.orientation"></bl-select>
-            <bl-cubic-dimensions label="Uterus Dimensions" [controls]="controls[i].uterus.dimensions.controls">
-            </bl-cubic-dimensions>
-            <bl-input label="Endometrial Thickness" type="number" [control]="controls[i].uterus.endometrial_thickness">
-            </bl-input>
-            <!-- End Uterus -->
-            <!-- Begin Ovaries -->
-            <div *ngFor="let item of controls[i].ovaries; let j = index;">
-                <bl-slide-toggle label="Ovary Visualized" [control]="controls[i].ovaries[j].controls.present">
-                </bl-slide-toggle>
-                <bl-cubic-dimensions label="Ovary Dimensions"
-                    [controls]="controls[i].ovaries[j].controls.dimensions.controls">
+<bl-expansion-panel>
+    <div title>Transvaginal Ultrasounds</div>
+    <div description></div>
+    <div body [formGroup]="parentForm">
+        <div formArrayName="methotrexateDetailsFormArray" *ngIf="transvaginalUltrasoundDetails | async">
+            <div *ngFor="let item of controls; let i = index;">
+                <bl-date-picker label="Ultrasound Date" [control]="controls[i].date"></bl-date-picker>
+                <!-- Begin Uterus -->
+                <bl-select label="Uterus Orientation" [options]="uterusOrientationOptions"
+                    [control]="controls[i].uterus.orientation"></bl-select>
+                <bl-cubic-dimensions label="Uterus Dimensions" [controls]="controls[i].uterus.dimensions.controls">
                 </bl-cubic-dimensions>
+                <bl-input label="Endometrial Thickness" type="number" [control]="controls[i].uterus.endometrial_thickness">
+                </bl-input>
+                <!-- End Uterus -->
+                <!-- Begin Ovaries -->
+                <div *ngFor="let item of controls[i].ovaries; let j = index;">
+                    <bl-slide-toggle label="Ovary Visualized" [control]="controls[i].ovaries[j].controls.present">
+                    </bl-slide-toggle>
+                    <bl-cubic-dimensions label="Ovary Dimensions"
+                        [controls]="controls[i].ovaries[j].controls.dimensions.controls">
+                    </bl-cubic-dimensions>
+                </div>
+                <!-- End Ovaries -->
+                <bl-select label="Intrauterine Pregnancy Present" [options]="nullableBooleanRadioOptions"
+                    [control]="controls[i].intra_uterine_pregnancy_present"></bl-select>
+                <!-- Begin Gestational Sack -->
+                <bl-input label="Gestational Sack Size" type="number" [control]="controls[i].gestational_sack_size">
+                </bl-input>
+                <!-- End Gestational Sack -->
+                <bl-select label="Yolk Sack Present" [options]="nullableBooleanRadioOptions"
+                    [control]="controls[i].yolk_sack_present"></bl-select>
+                <bl-input label="Crown Rump Length" type="number" [control]="controls[i].crown_rump_length"></bl-input>
+                <bl-select label="Fetal Heart Rate Present" [options]="nullableBooleanRadioOptions"
+                    [control]="controls[i].fetal_heart_rate_present"></bl-select>
+                <div fxLayout="row" fxLayoutGap="10px">
+                    <mat-label fxFlex="33.33">Estimated Gestational Age (days)</mat-label>
+                    <!-- <bl-input fxFlex="33.33" label="Weeks" type="number"></bl-input> -->
+                    <bl-input fxFlex="33.33" label="Days" type="number"
+                        [control]="controls[i].estimated_gestational_age_in_days"></bl-input>
+                </div>
+    
+                <div *ngFor="let item of controls[i].adnexal_masses; let j = index;">
+                    <!-- Begin Adnexal Masses -->
+                    <bl-select label="Adnexal Mass Side" [options]="adnexalMassSideOptions"
+                        [control]="controls[i].adnexal_masses[j].controls.side"></bl-select>
+                    <bl-select label="Adnexal Mass Location" [options]="adnexalMassLocationOptions"
+                        [control]="controls[i].adnexal_masses[j].controls.location"></bl-select>
+                    <bl-input label="Adnexal Mass Size" type="number"
+                        [control]="controls[i].adnexal_masses[j].controls.size"></bl-input>
+    
+                    <!-- End Adnexal Masses -->
+                </div>
+                <bl-select label="Free Fluid Amount" [options]="freeFluidAmountOptions"
+                    [control]="controls[i].free_fluid_amount"></bl-select>
+    
             </div>
-            <!-- End Ovaries -->
-            <bl-select label="Intrauterine Pregnancy Present" [options]="nullableBooleanRadioOptions"
-                [control]="controls[i].intra_uterine_pregnancy_present"></bl-select>
-            <!-- Begin Gestational Sack -->
-            <bl-input label="Gestational Sack Size" type="number" [control]="controls[i].gestational_sack_size">
-            </bl-input>
-            <!-- End Gestational Sack -->
-            <bl-select label="Yolk Sack Present" [options]="nullableBooleanRadioOptions"
-                [control]="controls[i].yolk_sack_present"></bl-select>
-            <bl-input label="Crown Rump Length" type="number" [control]="controls[i].crown_rump_length"></bl-input>
-            <bl-select label="Fetal Heart Rate Present" [options]="nullableBooleanRadioOptions"
-                [control]="controls[i].fetal_heart_rate_present"></bl-select>
-            <div fxLayout="row" fxLayoutGap="10px">
-                <mat-label fxFlex="33.33">Estimated Gestational Age (days)</mat-label>
-                <!-- <bl-input fxFlex="33.33" label="Weeks" type="number"></bl-input> -->
-                <bl-input fxFlex="33.33" label="Days" type="number"
-                    [control]="controls[i].estimated_gestational_age_in_days"></bl-input>
-            </div>
-
-            <div *ngFor="let item of controls[i].adnexal_masses; let j = index;">
-                <!-- Begin Adnexal Masses -->
-                <bl-select label="Adnexal Mass Side" [options]="adnexalMassSideOptions"
-                    [control]="controls[i].adnexal_masses[j].controls.side"></bl-select>
-                <bl-select label="Adnexal Mass Location" [options]="adnexalMassLocationOptions"
-                    [control]="controls[i].adnexal_masses[j].controls.location"></bl-select>
-                <bl-input label="Adnexal Mass Size" type="number"
-                    [control]="controls[i].adnexal_masses[j].controls.size"></bl-input>
-
-                <!-- End Adnexal Masses -->
-            </div>
-            <bl-select label="Free Fluid Amount" [options]="freeFluidAmountOptions"
-                [control]="controls[i].free_fluid_amount"></bl-select>
-
         </div>
     </div>
-</div>
+</bl-expansion-panel>

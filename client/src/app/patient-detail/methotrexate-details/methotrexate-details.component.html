@@ -1,10 +1,14 @@
-<div [formGroup]="parentForm">
-    <div formArrayName="methotrexateDetailsFormArray" *ngIf="methotrexateDetails | async">
-        <div *ngFor="let item of controls; let i = index;">
-            <div [formGroupName]="i" fxLayout="row" fxLayoutGap="10px">
-                <bl-date-picker fxFlex="50" label="Date" [control]="controls[i].date"></bl-date-picker>
-                <bl-input fxFlex="50" label="Quantity" type="number" [control]="controls[i].quantity"></bl-input>
+<bl-expansion-panel>
+    <div title>Methotrexate Doses</div>
+    <div description></div>
+    <div body [formGroup]="parentForm">
+        <div formArrayName="methotrexateDetailsFormArray" *ngIf="methotrexateDetails | async">
+            <div *ngFor="let item of controls; let i = index;">
+                <div [formGroupName]="i" fxLayout="row" fxLayoutGap="10px">
+                    <bl-date-picker fxFlex="50" label="Date" [control]="controls[i].date"></bl-date-picker>
+                    <bl-input fxFlex="50" label="Quantity" type="number" [control]="controls[i].quantity"></bl-input>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</bl-expansion-panel>
