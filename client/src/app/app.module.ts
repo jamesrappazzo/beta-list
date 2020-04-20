@@ -30,6 +30,7 @@ import { ActivePatientStoreService } from './services/active-patient-store.servi
 import { PathologyResultsDetailsComponent } from './patient-detail/pathology-details/pathology-details.component';
 import { MethotrexateDetailsComponent } from './patient-detail/methotrexate-details/methotrexate-details.component';
 import { ExpansionPanelComponent } from './form-components/expansion-panel/expansion-panel.component';
+import { TableComponent } from './form-components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ExpansionPanelComponent } from './form-components/expansion-panel/expan
     BetaReadingsDetailsComponent,
     MethotrexateDetailsComponent,
     PathologyResultsDetailsComponent,
-    ExpansionPanelComponent],
+    ExpansionPanelComponent,
+    TableComponent],
   imports: [
     FlexLayoutModule,
     BrowserModule,
@@ -60,7 +62,7 @@ import { ExpansionPanelComponent } from './form-components/expansion-panel/expan
     CustomMaterialModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [PatientsService, ActivePatientStoreService],
   bootstrap: [AppComponent]

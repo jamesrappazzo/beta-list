@@ -10,6 +10,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
     exports: [
@@ -22,7 +23,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
         MatSlideToggleModule,
         ObserversModule,
         PlatformModule,
-        MatExpansionModule
+        MatExpansionModule,
+        MatTableModule
     ]
 })
 export class CustomMaterialModule { }
